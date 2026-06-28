@@ -35,7 +35,7 @@ function App() {
 
       {/* Top Nav */}
       <nav className="relative z-20 w-full px-6 pt-6 flex justify-end max-w-7xl mx-auto">
-        <a 
+        <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSdJS1l8bEX_ewBamPc-L-DfKMUUjIqLqT2qsnJjSP2oRpBd9A/viewform?usp=header"
           target="_blank"
           rel="noopener noreferrer"
@@ -57,7 +57,7 @@ function App() {
             Juntos por Venezuela
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground mb-6">
-            Iniciativas Solidarias <br/> <span className="text-primary">24 de Junio</span>
+            Iniciativas Tech <br /> <span className="text-primary">24 de Junio</span>
           </h1>
           <p className="text-lg md:text-xl text-foreground/70 mb-10 leading-relaxed max-w-2xl mx-auto">
             Plataforma dedicada a dar visibilidad a los proyectos web y tecnológicos venezolanos creados para asistir y brindar apoyo tras los recientes eventos sísmicos.
@@ -95,14 +95,14 @@ function App() {
                   key={project.id}
                   className="w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)]"
                 >
-                  <div 
+                  <div
                     onClick={() => openModal(project)}
                     className="glass-card rounded-3xl overflow-hidden cursor-pointer group h-full flex flex-col hover:-translate-y-2 transition-transform duration-300 hover:shadow-xl hover:shadow-primary/10 border border-border/50"
                   >
                     <div className="relative h-56 overflow-hidden">
-                      <img 
-                        src={project.thumbnail} 
-                        alt={project.name} 
+                      <img
+                        src={project.thumbnail}
+                        alt={project.name}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -128,7 +128,7 @@ function App() {
                 </motion.div>
               ))
             ) : (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="w-full py-20 text-center"
@@ -148,10 +148,10 @@ function App() {
       <footer className="relative z-10 w-full py-8 border-t border-border/50 bg-card/30 backdrop-blur-sm mt-auto text-center">
         <p className="text-foreground/70 font-medium text-sm">
           Desarrollado por{' '}
-          <a 
-            href="https://github.com/WilterD" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://github.com/WilterD"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-primary hover:underline font-semibold"
           >
             WilterD
@@ -180,13 +180,13 @@ function App() {
               >
                 {/* Modal Header & Image */}
                 <div className="relative h-64 sm:h-80 shrink-0">
-                  <img 
-                    src={selectedProject.thumbnail} 
-                    alt={selectedProject.name} 
+                  <img
+                    src={selectedProject.thumbnail}
+                    alt={selectedProject.name}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  <button 
+                  <button
                     onClick={closeModal}
                     className="absolute top-4 right-4 p-2 rounded-full bg-black/20 hover:bg-black/40 text-white backdrop-blur-md transition-colors"
                   >
@@ -200,7 +200,7 @@ function App() {
                         <span>Iniciativa Nacional, Venezuela</span>
                       </div>
                     </div>
-                    <a 
+                    <a
                       href={selectedProject.url}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -219,24 +219,24 @@ function App() {
                     <div className="flex flex-col sm:flex-row gap-3">
                       <div className="flex-1 flex items-center gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10">
                         <ExternalLink className="w-5 h-5 text-primary shrink-0" />
-                        <a 
-                          href={selectedProject.url} 
-                          target="_blank" 
+                        <a
+                          href={selectedProject.url}
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="text-primary font-medium hover:underline truncate"
                         >
                           {selectedProject.url}
                         </a>
                       </div>
-                      
+
                       {selectedProject.hasApi && (
                         <div className="flex-1 flex items-center gap-3 p-4 rounded-xl bg-green-50 border border-green-100">
                           <span className="text-lg shrink-0">✅</span>
                           <div className="flex flex-col overflow-hidden">
                             <span className="text-green-800 font-semibold text-sm">API Pública</span>
-                            <a 
-                              href={selectedProject.apiUrl} 
-                              target="_blank" 
+                            <a
+                              href={selectedProject.apiUrl}
+                              target="_blank"
                               rel="noopener noreferrer"
                               className="text-green-600 text-xs hover:underline truncate"
                             >
@@ -253,7 +253,7 @@ function App() {
                       <p className="text-foreground/80 leading-relaxed">
                         {selectedProject.description}
                       </p>
-                      
+
                       <AnimatePresence>
                         {showFullDescription && (
                           <motion.div
@@ -265,14 +265,14 @@ function App() {
                             <p className="text-foreground/80 leading-relaxed mt-4">
                               {selectedProject.fullDescription}
                             </p>
-                            
+
                             {selectedProject.images && selectedProject.images.length > 0 && (
                               <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {selectedProject.images.map((img, idx) => (
-                                  <img 
-                                    key={idx} 
-                                    src={img} 
-                                    alt={`Gallery ${idx + 1}`} 
+                                  <img
+                                    key={idx}
+                                    src={img}
+                                    alt={`Gallery ${idx + 1}`}
                                     className="w-full h-48 object-cover rounded-xl shadow-sm border border-border/50"
                                   />
                                 ))}
@@ -281,9 +281,9 @@ function App() {
                           </motion.div>
                         )}
                       </AnimatePresence>
-                      
+
                       {!showFullDescription && (
-                        <button 
+                        <button
                           onClick={() => setShowFullDescription(true)}
                           className="mt-4 text-primary font-medium hover:text-primary/80 transition-colors inline-flex items-center gap-1"
                         >
