@@ -1,71 +1,89 @@
 export const projectsData = [
   {
     id: 1,
-    name: "Ayuda Vzla",
-    thumbnail: "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=800",
-    description: "Plataforma centralizada de acopio y distribución de recursos para afectados.",
-    fullDescription: "Ayuda Vzla es un sistema integral que conecta donantes con centros de acopio estratégicamente ubicados en el país. Permite a los usuarios rastrear la entrega de sus aportes en tiempo real y ofrece un mapa interactivo de las zonas con mayor necesidad, garantizando transparencia y eficiencia en la distribución de insumos médicos y alimentos no perecederos.",
-    url: "https://ayudavzla-example.com",
+    name: "Build4Venezuela",
+    thumbnail: "./img/build4vzla.png",
+    description: "Iniciativa y hackathon cívico para construir soluciones tecnológicas por Venezuela.",
+    fullDescription: "Build4Venezuela es un espacio que conecta a desarrolladores, diseñadores y gestores de proyectos para crear herramientas digitales que ayuden a mitigar las crisis y emergencias en Venezuela. Fomenta el código abierto y la colaboración masiva para el bien común.",
+    url: "https://build4venezuela.com/",
+    hasApi: false,
+    apiUrl: "",
     images: [
-      "https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800"
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
     ]
   },
   {
     id: 2,
-    name: "Refugio Connect",
-    thumbnail: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&q=80&w=800",
-    description: "Directorio de refugios temporales y disponibilidad de camas en tiempo real.",
-    fullDescription: "Ante la emergencia, Refugio Connect proporciona información actualizada sobre la capacidad y ubicación de los distintos albergues habilitados en el territorio nacional. Los coordinadores de los refugios actualizan la disponibilidad, permitiendo a los rescatistas y afectados tomar decisiones rápidas y precisas sobre a dónde dirigirse.",
-    url: "https://refugioconnect-example.org",
+    name: "Red Ayuda Venezuela",
+    thumbnail: "./img/red_ayuda.png",
+    description: "Plataforma centralizada para reportar y visualizar necesidades y centros de acopio.",
+    fullDescription: "Red Ayuda Venezuela permite a los ciudadanos publicar necesidades urgentes (insumos médicos, alimentos, rescate) y a las organizaciones coordinar la respuesta. Su sistema de mapeo ayuda a distribuir eficientemente los recursos donados a las zonas más afectadas.",
+    url: "https://redayudavenezuela.com/ayuda/necesidades",
+    hasApi: false,
     images: [
-      "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=800"
+      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800"
     ]
   },
   {
     id: 3,
-    name: "MedicaSOS",
-    thumbnail: "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&q=80&w=800",
-    description: "Red de asistencia médica remota y directorio de farmacias abastecidas.",
-    fullDescription: "MedicaSOS facilita consultas de telemedicina con especialistas voluntarios para tratar afecciones leves o de emergencia moderada, descongestionando los hospitales. Además, integra un sistema de reporte comunitario sobre el stock de medicamentos de primera necesidad en farmacias operativas.",
-    url: "https://medicasos-example.ve",
+    name: "Venezuela Reporta",
+    thumbnail: "./img/vzla_reporta.png",
+    description: "Sistema de reporte ciudadano sobre incidentes, estado de vías y servicios básicos.",
+    fullDescription: "Venezuela Reporta empodera a los ciudadanos para que informen en tiempo real sobre derrumbes, vías bloqueadas, cortes de electricidad o falta de agua. Esta información vital ayuda a los equipos de rescate a trazar rutas seguras y evaluar daños.",
+    url: "https://venezuelareporta.org",
+    hasApi: true,
+    apiUrl: "https://venezuelareporta.org/api-abierta",
     images: [
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&q=80&w=800"
+      "./img/vzla_reporta.png"
     ]
   },
   {
     id: 4,
-    name: "Voluntarios 24J",
-    thumbnail: "https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?auto=format&fit=crop&q=80&w=800",
-    description: "Sistema de registro y asignación de tareas para voluntarios en terreno.",
-    fullDescription: "Una plataforma ágil para movilizar el talento civil. Personas de todas las profesiones pueden registrarse y ser contactadas por ONGs que requieren personal para remoción de escombros, atención psicológica, logística, y apoyo en la preparación de alimentos en comedores solidarios.",
-    url: "https://voluntarios24j-example.net",
+    name: "Reencuentra VE",
+    thumbnail: "./img/reencuentra.png",
+    description: "Aplicación dedicada a la búsqueda y localización de personas desaparecidas.",
+    fullDescription: "Tras los recientes eventos sísmicos, Reencuentra VE ofrece una base de datos segura y de fácil acceso donde familiares pueden publicar fotos y datos de personas extraviadas, y los refugios o rescatistas pueden reportar a las personas que han sido localizadas.",
+    url: "https://reencuentra-ve.vercel.app",
+    hasApi: false,
     images: [
-      "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&q=80&w=800"
+      "./img/reencuentra.png"
     ]
   },
   {
     id: 5,
-    name: "SOS Mascotas Vzla",
-    thumbnail: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=800",
-    description: "Plataforma de rescate, atención veterinaria y búsqueda de mascotas perdidas.",
-    fullDescription: "Dedicados a los más vulnerables del reino animal, SOS Mascotas permite reportar animales extraviados tras los sismos, ubicar centros veterinarios operativos y canalizar donaciones de alimentos y medicinas para refugios de animales rescatados.",
-    url: "https://sosmascotas-example.org",
+    name: "Encuentrame VE",
+    thumbnail: "./img/encuentrameve.png",
+    description: "Plataforma centralizada para buscar y reportar personas desaparecidas.",
+    fullDescription: "Encuentrame VE es una iniciativa solidaria diseñada para consolidar la información de personas extraviadas o no localizadas. Permite a familiares, voluntarios y organizaciones registrar reportes detallados, agilizando los esfuerzos de búsqueda y reencuentro familiar.",
+    url: "https://encuentrame-ve.com/",
+    hasApi: false,
     images: [
-      "https://images.unsplash.com/photo-1543466835-00a733973cb4?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&q=80&w=800"
+      "./img/encuentrameve.png"
     ]
   },
   {
     id: 6,
-    name: "Agua Para Todos",
-    thumbnail: "https://images.unsplash.com/photo-1551000676-4cd4a3822181?auto=format&fit=crop&q=80&w=800",
-    description: "Monitoreo del suministro de agua potable y rutas de camiones cisterna.",
-    fullDescription: "Garantizar el acceso a agua potable es crítico. Esta aplicación colaborativa muestra en el mapa qué zonas cuentan con el servicio restablecido, los horarios estimados de racionamiento, y la ubicación en vivo de los camiones cisterna despachados por organismos oficiales y privados.",
-    url: "https://aguaparatodos-example.com",
+    name: "Bot Localizados Vzla",
+    thumbnail: "./img/bot_telegram.jpeg",
+    description: "Bot automatizado por WhatsApp y Telegram para reporte de personas con endpoints públicos.",
+    fullDescription: "Asistente virtual de acceso rápido desde WhatsApp (wa.me/584225252437) y Telegram (t.me/localizadosvzla2026_bot). Facilita el reporte y búsqueda de personas desaparecidas o localizadas. Cuenta con endpoints públicos, lo que permite a otras iniciativas y plataformas integrarse de forma eficiente.",
+    url: "https://t.me/localizadosvzla2026_bot",
+    hasApi: true,
+    apiUrl: "Endpoints públicos integrados",
     images: [
-      "https://images.unsplash.com/photo-1585250493630-f2038753232b?auto=format&fit=crop&q=80&w=800"
+      "./img/bot_telegram.jpeg"
+    ]
+  },
+  {
+    id: 7,
+    name: "Técnicos Por Venezuela",
+    thumbnail: "./img/tecnicos.png",
+    description: "Plataforma de registro y atención de casos que requieren asistencia técnica.",
+    fullDescription: "Técnicos Por Venezuela es un espacio dedicado a canalizar reportes de averías o necesidades de infraestructura técnica crítica. Voluntarios especialistas pueden visualizar el mapa de casos, priorizar incidencias y coordinar esfuerzos para el restablecimiento de servicios.",
+    url: "https://tecnicosporvenezuela.com/casos",
+    hasApi: false,
+    images: [
+      "./img/tecnicos.png"
     ]
   }
 ];

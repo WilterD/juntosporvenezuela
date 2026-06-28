@@ -33,8 +33,20 @@ function App() {
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px] pointer-events-none" />
 
+      {/* Top Nav */}
+      <nav className="relative z-20 w-full px-6 pt-6 flex justify-end max-w-7xl mx-auto">
+        <a 
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdJS1l8bEX_ewBamPc-L-DfKMUUjIqLqT2qsnJjSP2oRpBd9A/viewform?usp=header"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center px-6 py-2.5 bg-primary text-primary-foreground font-medium rounded-full shadow-lg shadow-primary/20 hover:scale-105 transition-transform"
+        >
+          Proponer proyecto
+        </a>
+      </nav>
+
       {/* Header */}
-      <header className="pt-16 pb-12 px-6 relative z-10 text-center">
+      <header className="pt-8 pb-12 px-6 relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -100,7 +112,14 @@ function App() {
                       </div>
                     </div>
                     <div className="p-6 flex flex-col flex-grow">
-                      <h3 className="text-2xl font-bold text-foreground mb-3">{project.name}</h3>
+                      <div className="flex items-start justify-between mb-3 gap-2">
+                        <h3 className="text-2xl font-bold text-foreground leading-tight">{project.name}</h3>
+                        {project.hasApi && (
+                          <div className="shrink-0 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-green-100 text-green-700 text-xs font-semibold border border-green-200" title="API Pública Disponible">
+                            <span>✅ API</span>
+                          </div>
+                        )}
+                      </div>
                       <p className="text-foreground/70 line-clamp-3 mb-4 flex-grow text-sm leading-relaxed">
                         {project.description}
                       </p>
@@ -124,6 +143,21 @@ function App() {
           </AnimatePresence>
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="relative z-10 w-full py-8 border-t border-border/50 bg-card/30 backdrop-blur-sm mt-auto text-center">
+        <p className="text-foreground/70 font-medium text-sm">
+          Desarrollado por{' '}
+          <a 
+            href="https://github.com/WilterD" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-primary hover:underline font-semibold"
+          >
+            WilterD
+          </a>
+        </p>
+      </footer>
 
       {/* Modal */}
       <AnimatePresence>
@@ -182,16 +216,35 @@ function App() {
                 <div className="p-6 sm:p-8 overflow-y-auto">
                   <div className="flex flex-col gap-6">
                     {/* URL Display */}
-                    <div className="flex items-center gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10">
-                      <ExternalLink className="w-5 h-5 text-primary" />
-                      <a 
-                        href={selectedProject.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-primary font-medium hover:underline truncate"
-                      >
-                        {selectedProject.url}
-                      </a>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <div className="flex-1 flex items-center gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10">
+                        <ExternalLink className="w-5 h-5 text-primary shrink-0" />
+                        <a 
+                          href={selectedProject.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-primary font-medium hover:underline truncate"
+                        >
+                          {selectedProject.url}
+                        </a>
+                      </div>
+                      
+                      {selectedProject.hasApi && (
+                        <div className="flex-1 flex items-center gap-3 p-4 rounded-xl bg-green-50 border border-green-100">
+                          <span className="text-lg shrink-0">✅</span>
+                          <div className="flex flex-col overflow-hidden">
+                            <span className="text-green-800 font-semibold text-sm">API Pública</span>
+                            <a 
+                              href={selectedProject.apiUrl} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-green-600 text-xs hover:underline truncate"
+                            >
+                              {selectedProject.apiUrl}
+                            </a>
+                          </div>
+                        </div>
+                      )}
                     </div>
 
                     {/* Description Section */}
