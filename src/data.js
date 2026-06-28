@@ -89,7 +89,7 @@ export const projectsData = [
   {
     id: 8,
     name: "Hazlo Hoy",
-    thumbnail: "./img/hazlohoy.jpeg",
+    thumbnail: "./img/hazlohoy.png",
     description: "Iniciativa de apoyo, acopio y asistencia solidaria para damnificados.",
     fullDescription: "Hazlo Hoy centraliza los esfuerzos de donación y asistencia directa a las víctimas de los sismos recientes. Facilita la logística de entrega y fomenta la participación ciudadana para llevar recursos de primera necesidad a las comunidades más afectadas.",
     url: "https://terremoto.hazlohoy.org/",
