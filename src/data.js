@@ -215,5 +215,45 @@ export const projectsData = [
     hasApi: true,
     apiUrl: "https://civisvenezuela.com/api",
     images: ["./img/civisvenezuela.png"]
+  },
+  {
+    id: 30,
+    name: "Rescata Venezuela",
+    thumbnail: "./img/rescatavenezuela.png",
+    description: "Iniciativa de coordinación para asistencia humanitaria y rescate.",
+    fullDescription: "Rescata Venezuela es una plataforma integral destinada a facilitar y agilizar la respuesta ante emergencias, centralizando esfuerzos de rescate, atención médica primaria y recolección de insumos vitales para las comunidades más impactadas por los sismos.",
+    url: "https://www.rescatavenezuela.com/",
+    hasApi: false,
+    images: ["./img/rescatavenezuela.png"]
+  },
+  {
+    id: 31,
+    name: "SismoAyudaVE",
+    thumbnail: "./img/sismoayudave.png",
+    description: "Evaluación de daños en edificios por ingenieros civiles voluntarios.",
+    fullDescription: "¿Tu edificio resultó dañado por el sismo? Ingenieros civiles voluntarios revisarán las fotos que envíes y te entregarán un informe de evaluación por correo electrónico en el menor tiempo posible.",
+    url: "https://www.sismoayudave.com",
+    hasApi: false,
+    images: ["./img/sismoayudave.png"]
+  },
+  {
+    id: 32,
+    name: "Zerena.help",
+    thumbnail: "./img/zerena.png",
+    description: "Espacio de apoyo basado en Primeros Auxilios Psicológicos (OMS/OPS).",
+    fullDescription: "Zerena es un espacio de apoyo de primera instancia basado en los Primeros Auxilios Psicológicos (OMS/OPS). No es terapia, no diagnostica y no reemplaza la atención de un profesional ni los servicios de emergencia.",
+    url: "https://zerena.help/",
+    hasApi: false,
+    images: ["./img/zerena.png"]
+  },
+  {
+    id: 33,
+    name: "Acopio Venezuela",
+    thumbnail: "./img/acopiovenezuela.png",
+    description: "Coordinación logística y de comunicación para puntos de acopio.",
+    fullDescription: "Iniciativa que unifica información logística de entrega de suministros. Conecta a voluntarios en puntos de acopio y refugios improvisados, mejorando el traslado y redirigiendo más eficazmente los recursos.",
+    url: "https://acopiovenezuela.netlify.app/",
+    hasApi: false,
+    images: ["./img/acopiovenezuela.png"]
   }
 ];
