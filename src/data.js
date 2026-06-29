@@ -306,5 +306,26 @@ export const projectsData = [
     url: "https://www.ayudavnzla.org/",
     hasApi: false,
     images: ["./img/ayudavnzla.png"]
+  },
+  {
+    id: 39,
+    name: "Red Acopio Vnzla",
+    thumbnail: "./img/redacopiovnzla.png",
+    description: "Registro de donaciones y divulgación de inventarios en tiempo real.",
+    fullDescription: "Plataforma para registrar donaciones y divulgación de inventarios en tiempo real de todos los centros de acopio registrados para tener mayor visibilidad. Si eres jefe de un centro de acopio puedes registrar el centro y luego será validado por su equipo para que todos puedan visualizarlo.",
+    url: "https://www.redacopiovnzla.com/",
+    hasApi: false,
+    images: ["./img/redacopiovnzla.png"]
+  },
+  {
+    id: 40,
+    name: "Palmedico AI",
+    thumbnail: "./img/palmedico.jpeg",
+    description: "Bot de Telegram para encontrar personas desaparecidas.",
+    fullDescription: "Asistente virtual de acceso rápido desde Telegram (@palmedicoai_bot). Facilita el reporte y búsqueda de personas desaparecidas tras las emergencias.",
+    url: "https://t.me/palmedicoai_bot",
+    hasApi: true,
+    apiUrl: "https://t.me/palmedicoai_bot",
+    images: ["./img/palmedico.jpeg"]
   }
 ];
