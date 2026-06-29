@@ -57,7 +57,7 @@ function App() {
             Juntos por Venezuela
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground mb-6">
-            Iniciativas Tech <br /> <span className="text-primary">24 de Junio</span>
+            Iniciativas Tech <br /> <span className="text-primary">Venezuela</span>
           </h1>
           <p className="text-lg md:text-xl text-foreground/70 mb-10 leading-relaxed max-w-2xl mx-auto">
             Plataforma dedicada a dar visibilidad a los proyectos web y tecnológicos venezolanos creados para asistir y brindar apoyo tras los recientes eventos sísmicos.
