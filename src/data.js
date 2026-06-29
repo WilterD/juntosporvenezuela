@@ -255,5 +255,26 @@ export const projectsData = [
     url: "https://acopiovenezuela.netlify.app/",
     hasApi: false,
     images: ["./img/acopiovenezuela.png"]
+  },
+  {
+    id: 34,
+    name: "AidTrace | RastroAyuda",
+    thumbnail: "./img/aidtrace.png",
+    description: "Solución offline-first para rastrear suministros humanitarios mediante QR y blockchain.",
+    fullDescription: "En operaciones humanitarias con baja conectividad, AidTrace permite registrar entregas de ayuda dejando evidencia verificable anclada en Celo, sin requerir conocimientos técnicos o conexión a internet al momento de la entrega. Soporte vía web y Telegram.",
+    url: "https://aidtrace-rastroayuda.vercel.app/",
+    hasApi: true,
+    apiUrl: "https://t.me/AidTrace_Bot",
+    images: ["./img/aidtrace.png"]
+  },
+  {
+    id: 35,
+    name: "GuacaMalla",
+    thumbnail: "./img/guacamaya.png",
+    description: "Red de emergencia en malla (Mesh) Bluetooth LE y WiFi Direct.",
+    fullDescription: "Sin señal, sin internet, la red sigue viva. GuacaMalla retransmite tu auxilio de teléfono en teléfono en zonas sin torres celulares o con pobre conexión. La autenticidad viaja firmada en cada señal, logrando comunicar y localizar a las personas.",
+    url: "https://www.guacamalla.org/",
+    hasApi: false,
+    images: ["./img/guacamaya.png"]
   }
 ];
