@@ -276,5 +276,35 @@ export const projectsData = [
     url: "https://www.guacamalla.org/",
     hasApi: false,
     images: ["./img/guacamaya.png"]
+  },
+  {
+    id: 36,
+    name: "Confía",
+    thumbnail: "./img/confia.png",
+    description: "Verificador contra la desinformación y estafas cripto durante la emergencia.",
+    fullDescription: "Confía contrasta rumores falsos con fuentes oficiales (FUNVISIS, Protección Civil, Cruz Roja) y hace análisis on-chain en vivo (antigüedad, historial y saldo) de las 'wallets de donación' marcando su riesgo 🔴/🟡/🟢. Funciona desde el navegador, en español y sin registro.",
+    url: "https://confia-rose.vercel.app",
+    hasApi: false,
+    images: ["./img/confia.png"]
+  },
+  {
+    id: 37,
+    name: "REDH",
+    thumbnail: "./img/redh.avapre.png",
+    description: "Plataforma de la Red de Emergencia y Ayuda Humanitaria.",
+    fullDescription: "Plataforma centralizada para la coordinación de recursos, asistencia y apoyo durante la situación de emergencia, enlazando necesidades con puntos de asistencia temprana.",
+    url: "https://redh.avapre.com/",
+    hasApi: false,
+    images: ["./img/redh.avapre.png"]
+  },
+  {
+    id: 38,
+    name: "AyudaVnzla",
+    thumbnail: "./img/ayudavnzla.png",
+    description: "Plataforma solidaria para centralizar donaciones y recursos.",
+    fullDescription: "Iniciativa orientada a maximizar el impacto de las donaciones y recursos enviados a los afectados por la emergencia, conectando iniciativas y esfuerzos humanitarios a nivel nacional.",
+    url: "https://www.ayudavnzla.org/",
+    hasApi: false,
+    images: ["./img/ayudavnzla.png"]
   }
 ];
