@@ -85,63 +85,63 @@ export const projectsData = [
   {
     id: 9,
     name: "Desaparecidos Terremoto Venezuela",
-    thumbnail: "./img/desaparecidos_terremoto.png",
+    thumbnail: "./img/desaparecidosterremotovenezuela.png",
     description: "56.000+ reportados | 37.000+ sin contacto | 19.000+ localizados.",
     fullDescription: "Buscar por nombre/cédula, reportar, marcar como encontrado. Sin necesidad de registro. Fuente verificada activa por CNN / El Caribe.",
     url: "https://desaparecidosterremotovenezuela.com",
     hasApi: false,
-    images: ["./img/desaparecidos_terremoto.png"]
+    images: ["./img/desaparecidosterremotovenezuela.png"]
   },
   {
     id: 10,
     name: "Venezuela Te Busca",
-    thumbnail: "./img/venezuela_te_busca.png",
+    thumbnail: "./img/venezuelatebusca.png",
     description: "26.000+ registros. Sección especial Terremoto 2026.",
     fullDescription: "Permite buscar, registrar y marcar como localizado. Esfuerzo de búsqueda activa respaldado por El Caribe.",
     url: "https://venezuelatebusca.com",
     hasApi: false,
-    images: ["./img/venezuela_te_busca.png"]
+    images: ["./img/venezuelatebusca.png"]
   },
   {
     id: 11,
     name: "Encuentrame VZLA",
-    thumbnail: "./img/encuentrame_vzla.png",
+    thumbnail: "./img/encuentramevzla.png",
     description: "Busca personas encontradas y llevadas a hospitales.",
     fullDescription: "Plataforma enfocada específicamente en registrar e identificar personas que han sido trasladadas a centros hospitalarios tras la emergencia.",
     url: "https://encuentramevzla.com",
     hasApi: false,
-    images: ["./img/encuentrame_vzla.png"]
+    images: ["./img/encuentramevzla.png"]
   },
   {
     id: 12,
     name: "venezuela-earthquake-map",
-    thumbnail: "./img/earthquake_map.png",
+    thumbnail: "./img/venezuela-earthquake-map.png",
     description: "Heatmap en tiempo real. Proyecto de código abierto (GitHub).",
     fullDescription: "Heatmap en tiempo real. Agrega reportes de YouTube, X/Twitter e Instagram cada 10 min. Centros de acopio verificados. Directorio 30+ hospitales. Licencia MIT.",
-    url: "https://github.com/nochinxx/venezuela-earthquake-map",
+    url: "https://venezuela-earthquake-map.vercel.app/",
     hasApi: true,
     apiUrl: "https://github.com/nochinxx/venezuela-earthquake-map",
-    images: ["./img/earthquake_map.png"]
+    images: ["./img/venezuela-earthquake-map.png"]
   },
   {
     id: 13,
     name: "Yummy SOS",
-    thumbnail: "./img/yummy_sos.png",
+    thumbnail: "./img/yummysos.png",
     description: "Reporte de daños estructurales con foto y GPS.",
     fullDescription: "Yummy moviliza repartidores para llevar agua, alimentos y medicamentos sin costo a refugios. Permite reporte directo desde la aplicación.",
     url: "https://sos.yummyrides.com",
     hasApi: false,
-    images: ["./img/yummy_sos.png"]
+    images: ["./img/yummysos.png"]
   },
   {
     id: 14,
     name: "Ayuda Terremoto Venezuela",
-    thumbnail: "./img/ayuda_terremoto.png",
+    thumbnail: "./img/recursos-venezuela.png",
     description: "Agregador verificado de recursos y plataformas.",
     fullDescription: "Agregador verificado: plataformas de búsqueda, instrucciones de supervivencia, canales de donación. Links a GlobalGiving, UNICEF y Cruz Roja.",
     url: "https://recursos-venezuela.netlify.app",
     hasApi: false,
-    images: ["./img/ayuda_terremoto.png"]
+    images: ["./img/recursos-venezuela.png"]
   },
   {
     id: 15,
@@ -154,26 +154,6 @@ export const projectsData = [
     images: ["./img/cruz_roja.png"]
   },
   {
-    id: 16,
-    name: "UNICEF Emergencia Venezuela",
-    thumbnail: "./img/unicef.png",
-    description: "Donación y fondos para protección infantil y asistencia familiar.",
-    fullDescription: "Fondos para protección infantil, refugio, alimentos e insumos. Aproximadamente 3,9 millones de niños en zonas afectadas requieren ayuda.",
-    url: "https://www.unicef.es/emergencia-terremoto-venezuela",
-    hasApi: false,
-    images: ["./img/unicef.png"]
-  },
-  {
-    id: 17,
-    name: "Save the Children",
-    thumbnail: "./img/save_the_children.png",
-    description: "Fondo 'Terremoto en Venezuela' orientado a menores.",
-    fullDescription: "Donación desde 30€ para ayudar a menores y familias en estado de vulnerabilidad tras los recientes sismos.",
-    url: "https://www.savethechildren.es/terremoto-venezuela",
-    hasApi: false,
-    images: ["./img/save_the_children.png"]
-  },
-  {
     id: 18,
     name: "We Love Foundation",
     thumbnail: "./img/we_love_foundation.png",
@@ -184,46 +164,24 @@ export const projectsData = [
     images: ["./img/we_love_foundation.png"]
   },
   {
-    id: 19,
-    name: "PAHO/OMS Venezuela Response",
-    thumbnail: "./img/paho_oms.png",
-    description: "Respuesta oficial sanitaria y situación epidemiológica.",
-    fullDescription: "Respuesta oficial de la Organización Panamericana de la Salud. Situación epidemiológica y coordinación internacional de salud.",
-    url: "https://www.paho.org/en/venezuela-earthquake-response",
-    hasApi: true,
-    apiUrl: "https://www.paho.org/en/venezuela-earthquake-response",
-    images: ["./img/paho_oms.png"]
-  },
-  {
-    id: 20,
-    name: "ReliefWeb — Venezuela Situation",
-    thumbnail: "./img/reliefweb.png",
-    description: "Informe OCHA. Fuente humanitaria de referencia internacional.",
-    fullDescription: "Informe de OCHA. Se actualiza constantemente con datos recopilados directamente en el campo. Es una de las fuentes de información humanitaria más confiables.",
-    url: "https://reliefweb.int/report/venezuela-bolivarian-republic/venezuela-earthquake-situation-overview-25-june-2026",
-    hasApi: true,
-    apiUrl: "https://api.reliefweb.int/v1/reports",
-    images: ["./img/reliefweb.png"]
-  },
-  {
     id: 21,
     name: "PsicoLínea Venezuela (UCAB)",
-    thumbnail: "./img/psicolinea.png",
+    thumbnail: "./img/ucab.png",
     description: "Atención psicológica gratuita por vía telefónica.",
     fullDescription: "Impulsado por la Universidad Católica Andrés Bello (UCAB). Tel: 0414-121 78 82 / 0424-172 39 81. Solo disponible dentro de Venezuela.",
     url: "tel:04141217882",
     hasApi: false,
-    images: ["./img/psicolinea.png"]
+    images: ["./img/ucab.png"]
   },
   {
     id: 22,
     name: "Grupo Venemergencia",
-    thumbnail: "./img/venemergencia.png",
+    thumbnail: "./img/ven_emergencia.png",
     description: "Plataforma médica venezolana operativa. Afectados físicos y psicológicos.",
     fullDescription: "Atención especializada para personas afectadas física y emocionalmente tras la emergencia, centralizando soporte a través de su plataforma.",
     url: "https://www.instagram.com/venemergencia",
     hasApi: false,
-    images: ["./img/venemergencia.png"]
+    images: ["./img/ven_emergencia.png"]
   },
   {
     id: 23,
@@ -234,26 +192,6 @@ export const projectsData = [
     url: "https://www.instagram.com/somosmeru",
     hasApi: false,
     images: ["./img/meru.png"]
-  },
-  {
-    id: 24,
-    name: "Banesco Duplica Donaciones",
-    thumbnail: "./img/banesco.png",
-    description: "El banco venezolano duplica tu aporte y lo dona a la Cruz Roja.",
-    fullDescription: "Cuenta bancaria para donar: 0134-0008-37-0081096451. El banco se compromete a duplicar los fondos recibidos para amplificar la ayuda.",
-    url: "https://www.banesco.com",
-    hasApi: false,
-    images: ["./img/banesco.png"]
-  },
-  {
-    id: 25,
-    name: "Movistar / O2 / MasOrange",
-    thumbnail: "./img/telecom.png",
-    description: "Llamadas internacionales gratuitas.",
-    fullDescription: "Llamadas internacionales gratuitas entre España y Venezuela activadas temporalmente por la situación de emergencia.",
-    url: "#",
-    hasApi: false,
-    images: ["./img/telecom.png"]
   },
   {
     id: 26,
@@ -278,22 +216,22 @@ export const projectsData = [
   {
     id: 28,
     name: "Red Venezuela Activa",
-    thumbnail: "./img/red_vzla_activa.png",
+    thumbnail: "./img/ayudavenezuela2026.png",
     description: "Plataforma ciudadana de coordinación de ayuda humanitaria.",
     fullDescription: "Conecta a quién necesita ayuda con quién puede darla. Registro de voluntarios, reporte de casos urgentes, albergues y sus necesidades, mapa en vivo y movilización por WhatsApp.",
     url: "https://ayudavenezuela2026.com",
     hasApi: false,
-    images: ["./img/red_vzla_activa.png"]
+    images: ["./img/ayudavenezuela2026.png"]
   },
   {
     id: 29,
     name: "CIVIS Venezuela",
-    thumbnail: "./img/civis_vzla.png",
+    thumbnail: "./img/civisvenezuela.png",
     description: "Sistema de registro y seguimiento de niños rescatados y búsqueda.",
     fullDescription: "Plataforma de apoyo ciudadano para emergencia: búsqueda de personas desaparecidas, reportes de daños, mapa de riesgos, puntos de abastecimiento, réplicas y agentes de IA por WhatsApp. Sistema offline disponible.",
     url: "https://civisvenezuela.com",
     hasApi: true,
     apiUrl: "https://civisvenezuela.com/api",
-    images: ["./img/civis_vzla.png"]
+    images: ["./img/civisvenezuela.png"]
   }
 ];
