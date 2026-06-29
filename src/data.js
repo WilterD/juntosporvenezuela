@@ -327,5 +327,38 @@ export const projectsData = [
     hasApi: true,
     apiUrl: "https://t.me/palmedicoai_bot",
     images: ["./img/palmedico.jpeg"]
+  },
+  {
+    id: 41,
+    name: "Voluntarios Venezuela",
+    thumbnail: "./img/voluntariosvenezuela.png",
+    description: "Registro público de voluntarios para coordinar ayuda tras el terremoto.",
+    fullDescription: "Iniciativa ciudadana, voluntaria y sin fines de lucro para coordinar la ayuda tras el terremoto. Al registrarte, tu nombre, número de teléfono y disponibilidad serán visibles públicamente para que los equipos de respuesta puedan contactarte. También permite visualizar el listado de voluntarios activos y las emergencias reportadas.",
+    url: "https://voluntariosvenezuela.org/registro",
+    hasApi: false,
+    apiUrl: "",
+    images: ["./img/voluntariosvenezuela.png"]
+  },
+  {
+    id: 42,
+    name: "Venezuela Juntos",
+    thumbnail: "./img/venezuelajuntos.png",
+    description: "Herramienta ciudadana para buscar personas, avisar reencuentros y coordinar ayuda.",
+    fullDescription: "Venezuela Juntos reúne reportes cargados por familiares, amistades, vecinos y voluntarios para facilitar búsqueda, verificación y apoyo comunitario. Permite reportar personas desaparecidas o encontradas, indicar que estás a salvo, reportar mascotas perdidas, solicitar u ofrecer refugio y ver un mapa de reportes en vivo.",
+    url: "https://venezuelajuntos.online/",
+    hasApi: false,
+    apiUrl: "",
+    images: ["./img/venezuelajuntos.png"]
+  },
+  {
+    id: 43,
+    name: "Localiza Pacientes",
+    thumbnail: "./img/localizapacientes.png",
+    description: "Sistema oficial para consultar la ubicación de personas atendidas tras el terremoto.",
+    fullDescription: "Centro Nacional de Localización de Personas. Sistema oficial con información actualizada en tiempo real por los hospitales del país. Permite consultar el estado y ubicación de pacientes ingresados, con cobertura nacional e integración de reportes hospitalarios. Incluye directorio de teléfonos oficiales: Emergencias 171, MPPS 0800-SALUD y Protección Civil.",
+    url: "https://localizapacientes.com",
+    hasApi: false,
+    apiUrl: "",
+    images: ["./img/localizapacientes.png"]
   }
 ];
