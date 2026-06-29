@@ -153,25 +153,16 @@ export const projectsData = [
     hasApi: false,
     images: ["./img/cruz_roja.png"]
   },
-  {
-    id: 18,
-    name: "We Love Foundation",
-    thumbnail: "./img/we_love_foundation.png",
-    description: "Iniciativa de GoFundMe para recolección de donaciones.",
-    fullDescription: "Meta inicial $300k ya superada. Trabajando en conjunto con Global Empowerment Mission. Proveen alimentos, agua, atención médica y kits de higiene.",
-    url: "https://www.gofundme.com/we-love-venezuela-terremoto-2026",
-    hasApi: false,
-    images: ["./img/we_love_foundation.png"]
-  },
+
   {
     id: 21,
     name: "PsicoLínea Venezuela (UCAB)",
-    thumbnail: "./img/ucab.png",
+    thumbnail: "./img/logo-ucab.png",
     description: "Atención psicológica gratuita por vía telefónica.",
     fullDescription: "Impulsado por la Universidad Católica Andrés Bello (UCAB). Tel: 0414-121 78 82 / 0424-172 39 81. Solo disponible dentro de Venezuela.",
     url: "tel:04141217882",
     hasApi: false,
-    images: ["./img/ucab.png"]
+    images: ["./img/logo-ucab.png"]
   },
   {
     id: 22,
@@ -183,16 +174,7 @@ export const projectsData = [
     hasApi: false,
     images: ["./img/ven_emergencia.png"]
   },
-  {
-    id: 23,
-    name: "Meru",
-    thumbnail: "./img/meru.png",
-    description: "Remesas sin comisión para depósitos/retiros en Venezuela.",
-    fullDescription: "Exoneración indefinida de tarifas para depósitos y retiros en Venezuela. Soporta Pago Móvil, transferencias bancarias y criptomonedas.",
-    url: "https://www.instagram.com/somosmeru",
-    hasApi: false,
-    images: ["./img/meru.png"]
-  },
+
   {
     id: 26,
     name: "TerremotoVenezuela.com",
