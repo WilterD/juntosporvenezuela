@@ -430,5 +430,18 @@ export const projectsData = [
     images: ["./img/localizapacientes.png"],
     category: "Salud",
     subcategories: ["Familiar", "Damnificado", "Médico"]
+  },
+  {
+    id: 44,
+    name: "VZLA Ayuda",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Operation%2C_Back_to_School_provides_humanitarian_aid_to_Iraqi_schoolchildren_DVIDS231068.jpg/800px-Operation%2C_Back_to_School_provides_humanitarian_aid_to_Iraqi_schoolchildren_DVIDS231068.jpg",
+    description: "Portal ciudadano para encontrar o brindar ayuda cerca de ti, sin cuentas y al instante.",
+    fullDescription: "VZLA Ayuda conecta a personas que necesitan apoyo con quienes pueden ofrecer ayuda cercana. Permite pedir o buscar recursos, ofrecer asistencia y consultar líneas de emergencia oficiales desde una iniciativa ciudadana independiente.",
+    url: "https://vzlayuda.com/",
+    hasApi: false,
+    apiUrl: "",
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Operation%2C_Back_to_School_provides_humanitarian_aid_to_Iraqi_schoolchildren_DVIDS231068.jpg/800px-Operation%2C_Back_to_School_provides_humanitarian_aid_to_Iraqi_schoolchildren_DVIDS231068.jpg"],
+    category: "Logística",
+    subcategories: ["Damnificado", "Voluntario", "Donante"]
   }
 ];
