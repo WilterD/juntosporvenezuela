@@ -1,27 +1,37 @@
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, ExternalLink, X, MapPin, Info, SlidersHorizontal, Tag } from 'lucide-react';
+import { Search, ExternalLink, X, MapPin, Info, SlidersHorizontal } from 'lucide-react';
 import { projectsData } from './data';
 import './index.css';
+
+const categories = [
+  'Localización',
+  'Logística',
+  'Salud',
+  'Comunicación',
+  'Infraestructura',
+  'Donaciones',
+];
+
+const subcategories = [
+  'Familiar',
+  'Rescatista',
+  'Damnificado',
+  'Voluntario',
+  'Médico',
+  'Psicólogo',
+  'Ingeniero',
+  'Veterinario',
+  'Operador',
+  'Donante',
+];
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('Todas');
-  const [selectedTags, setSelectedTags] = useState([]);
+  const [selectedSubcategory, setSelectedSubcategory] = useState('Todos');
   const [selectedProject, setSelectedProject] = useState(null);
   const [showFullDescription, setShowFullDescription] = useState(false);
-
-  const allTags = useMemo(() => {
-    const tagSet = new Set();
-    projectsData.forEach((project) => (project.tags || []).forEach((tag) => tagSet.add(tag)));
-    return Array.from(tagSet).sort();
-  }, []);
-
-  const toggleTag = (tag) => {
-    setSelectedTags((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
-    );
-  };
 
   const filteredProjects = useMemo(() => {
     const normalizedSearch = searchTerm.trim().toLowerCase();
@@ -34,7 +44,6 @@ function App() {
           project.fullDescription,
           project.category,
           ...(project.subcategories || []),
-          ...(project.tags || []),
         ]
           .filter(Boolean)
           .some((value) => value.toLowerCase().includes(normalizedSearch));
@@ -42,22 +51,22 @@ function App() {
         const matchesCategory =
           selectedCategory === 'Todas' || project.category === selectedCategory;
 
-        const matchesTags =
-          selectedTags.length === 0 ||
-          selectedTags.every((tag) => (project.tags || []).includes(tag));
+        const matchesSubcategory =
+          selectedSubcategory === 'Todos' ||
+          (project.subcategories || []).includes(selectedSubcategory);
 
-        return matchesSearch && matchesCategory && matchesTags;
+        return matchesSearch && matchesCategory && matchesSubcategory;
       })
       .sort((a, b) => (a.order || 0) - (b.order || 0));
-  }, [searchTerm, selectedCategory, selectedTags]);
+  }, [searchTerm, selectedCategory, selectedSubcategory]);
 
   const hasActiveFilters =
-    searchTerm || selectedCategory !== 'Todas' || selectedTags.length > 0;
+    searchTerm || selectedCategory !== 'Todas' || selectedSubcategory !== 'Todos';
 
   const clearFilters = () => {
     setSearchTerm('');
     setSelectedCategory('Todas');
-    setSelectedTags([]);
+    setSelectedSubcategory('Todos');
   };
 
   const openModal = (project) => {
@@ -153,21 +162,20 @@ function App() {
 
                 <div>
                   <p className="text-xs uppercase tracking-[0.18em] font-bold text-foreground/50 mb-2">
-                    Etiquetas
+                    Tipo de persona beneficiada
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {allTags.map((tag) => (
+                    {['Todos', ...subcategories].map((subcategory) => (
                       <button
-                        key={tag}
+                        key={subcategory}
                         type="button"
-                        onClick={() => toggleTag(tag)}
-                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all border ${selectedTags.includes(tag)
-                            ? 'bg-primary text-primary-foreground border-primary shadow-md shadow-primary/20'
-                            : 'bg-white/70 text-foreground/70 border-border hover:border-primary/40 hover:text-foreground'
+                        onClick={() => setSelectedSubcategory(subcategory)}
+                        className={`px-3.5 py-2 rounded-full text-sm font-semibold border transition-all ${selectedSubcategory === subcategory
+                            ? 'bg-foreground text-white border-foreground shadow-lg shadow-foreground/10'
+                            : 'bg-white/70 text-foreground/70 border-border hover:border-foreground/30 hover:text-foreground'
                           }`}
                       >
-                        <Tag className="w-3.5 h-3.5" />
-                        {tag}
+                        {subcategory}
                       </button>
                     ))}
                   </div>
@@ -233,14 +241,14 @@ function App() {
                             {project.category}
                           </span>
                         )}
-                        {(project.tags || [])
+                        {(project.subcategories || [])
                           .slice(0, 3)
-                          .map((tag) => (
+                          .map((subcategory) => (
                             <span
-                              key={tag}
+                              key={subcategory}
                               className="px-2.5 py-1 rounded-md bg-foreground/5 text-foreground/60 text-xs font-semibold"
                             >
-                              {tag}
+                              {subcategory}
                             </span>
                           ))}
                       </div>
