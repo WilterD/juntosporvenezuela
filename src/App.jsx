@@ -207,11 +207,10 @@ function App() {
               filteredProjects.map((project, index) => (
                 <motion.div
                   layout
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
+                  initial={hasActiveFilters ? false : { opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={hasActiveFilters ? { duration: 0 } : { duration: 0.5, delay: index * 0.1 }}
+                  exit={hasActiveFilters ? { opacity: 0 } : { opacity: 0, scale: 0.9 }}
                   key={project.id}
                   className="w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)]"
                 >
