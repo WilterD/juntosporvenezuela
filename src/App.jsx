@@ -1,21 +1,70 @@
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, ExternalLink, X, MapPin, Info } from 'lucide-react';
+import { Search, ExternalLink, X, MapPin, Info, SlidersHorizontal } from 'lucide-react';
 import { projectsData } from './data';
 import './index.css'; // Just in case, usually in main.jsx
 
+const categories = [
+  'Localización',
+  'Logística',
+  'Salud',
+  'Comunicación',
+  'Infraestructura',
+  'Donaciones',
+];
+
+const subcategories = [
+  'Familiar',
+  'Rescatista',
+  'Damnificado',
+  'Voluntario',
+  'Médico',
+  'Psicólogo',
+  'Ingeniero',
+  'Veterinario',
+  'Operador',
+  'Donante',
+];
+
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('Todas');
+  const [selectedSubcategory, setSelectedSubcategory] = useState('Todos');
   const [selectedProject, setSelectedProject] = useState(null);
   const [showFullDescription, setShowFullDescription] = useState(false);
 
   // Filter projects based on search term
   const filteredProjects = useMemo(() => {
-    return projectsData.filter((project) =>
-      project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.description.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-  }, [searchTerm]);
+    const normalizedSearch = searchTerm.trim().toLowerCase();
+
+    return projectsData.filter((project) => {
+      const matchesSearch = [
+        project.name,
+        project.description,
+        project.fullDescription,
+        project.category,
+        ...(project.subcategories || []),
+      ]
+        .filter(Boolean)
+        .some((value) => value.toLowerCase().includes(normalizedSearch));
+      const matchesCategory =
+        selectedCategory === 'Todas' || project.category === selectedCategory;
+      const matchesSubcategory =
+        selectedSubcategory === 'Todos' ||
+        project.subcategories?.includes(selectedSubcategory);
+
+      return matchesSearch && matchesCategory && matchesSubcategory;
+    });
+  }, [searchTerm, selectedCategory, selectedSubcategory]);
+
+  const hasActiveFilters =
+    searchTerm || selectedCategory !== 'Todas' || selectedSubcategory !== 'Todos';
+
+  const clearFilters = () => {
+    setSearchTerm('');
+    setSelectedCategory('Todas');
+    setSelectedSubcategory('Todos');
+  };
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -63,18 +112,89 @@ function App() {
             Plataforma dedicada a dar visibilidad a los proyectos web y tecnológicos venezolanos creados para asistir y brindar apoyo tras los recientes eventos sísmicos.
           </p>
 
-          {/* Search Bar */}
-          <div className="relative max-w-xl mx-auto group">
-            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-foreground/40 group-focus-within:text-primary transition-colors">
-              <Search className="h-5 w-5" />
+          {/* Search and Filters */}
+          <div className="max-w-5xl mx-auto glass-panel rounded-[2rem] p-4 sm:p-5 shadow-xl shadow-primary/5 border border-border/50">
+            <div className="relative group">
+              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-foreground/40 group-focus-within:text-primary transition-colors">
+                <Search className="h-5 w-5" />
+              </div>
+              <input
+                type="text"
+                className="block w-full pl-12 pr-4 py-4 rounded-2xl border border-border/50 bg-white/80 text-foreground placeholder-foreground/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all text-lg"
+                placeholder="Buscar por proyecto, categoría o tipo de persona..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
             </div>
-            <input
-              type="text"
-              className="block w-full pl-12 pr-4 py-4 rounded-2xl border border-border/50 glass-panel text-foreground placeholder-foreground/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all text-lg shadow-lg shadow-primary/5"
-              placeholder="Buscar proyectos, refugios, asistencia..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
+
+            <div className="mt-5 text-left">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-3">
+                <div className="inline-flex items-center gap-2 text-sm font-semibold text-foreground/70">
+                  <SlidersHorizontal className="w-4 h-4 text-primary" />
+                  Filtros rápidos para clasificar iniciativas
+                </div>
+                {hasActiveFilters && (
+                  <button
+                    type="button"
+                    onClick={clearFilters}
+                    className="text-sm font-semibold text-primary hover:text-primary/80 transition-colors self-start sm:self-auto"
+                  >
+                    Limpiar filtros
+                  </button>
+                )}
+              </div>
+
+              <div className="space-y-4">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.18em] font-bold text-foreground/50 mb-2">
+                    Categoría
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {['Todas', ...categories].map((category) => (
+                      <button
+                        key={category}
+                        type="button"
+                        onClick={() => setSelectedCategory(category)}
+                        className={`px-4 py-2 rounded-full text-sm font-semibold border transition-all ${
+                          selectedCategory === category
+                            ? 'bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/20'
+                            : 'bg-white/70 text-foreground/70 border-border hover:border-primary/40 hover:text-primary'
+                        }`}
+                      >
+                        {category}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <p className="text-xs uppercase tracking-[0.18em] font-bold text-foreground/50 mb-2">
+                    Tipo de persona beneficiada
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {['Todos', ...subcategories].map((subcategory) => (
+                      <button
+                        key={subcategory}
+                        type="button"
+                        onClick={() => setSelectedSubcategory(subcategory)}
+                        className={`px-3.5 py-2 rounded-full text-sm font-semibold border transition-all ${
+                          selectedSubcategory === subcategory
+                            ? 'bg-foreground text-white border-foreground shadow-lg shadow-foreground/10'
+                            : 'bg-white/70 text-foreground/70 border-border hover:border-foreground/30 hover:text-foreground'
+                        }`}
+                      >
+                        {subcategory}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <p className="mt-4 text-sm text-foreground/60">
+                Mostrando <span className="font-bold text-foreground">{filteredProjects.length}</span> de{' '}
+                <span className="font-bold text-foreground">{projectsData.length}</span> iniciativas.
+              </p>
+            </div>
           </div>
         </motion.div>
       </header>
@@ -123,6 +243,21 @@ function App() {
                       <p className="text-foreground/70 line-clamp-3 mb-4 flex-grow text-sm leading-relaxed">
                         {project.description}
                       </p>
+                      <div className="flex flex-wrap gap-2 mt-auto">
+                        {project.category && (
+                          <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold">
+                            {project.category}
+                          </span>
+                        )}
+                        {project.subcategories?.slice(0, 3).map((subcategory) => (
+                          <span
+                            key={subcategory}
+                            className="px-3 py-1 rounded-full bg-foreground/5 text-foreground/60 text-xs font-semibold"
+                          >
+                            {subcategory}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </motion.div>
@@ -137,7 +272,16 @@ function App() {
                   <Search className="h-8 w-8" />
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-2">No se encontraron proyectos</h3>
-                <p className="text-foreground/60">Intenta con otros términos de búsqueda.</p>
+                <p className="text-foreground/60 mb-4">Intenta con otros términos de búsqueda o limpia los filtros activos.</p>
+                {hasActiveFilters && (
+                  <button
+                    type="button"
+                    onClick={clearFilters}
+                    className="inline-flex items-center px-5 py-2.5 rounded-full bg-primary text-primary-foreground font-semibold hover:scale-105 transition-transform"
+                  >
+                    Limpiar filtros
+                  </button>
+                )}
               </motion.div>
             )}
           </AnimatePresence>
@@ -215,6 +359,22 @@ function App() {
                 {/* Modal Content */}
                 <div className="p-6 sm:p-8 overflow-y-auto">
                   <div className="flex flex-col gap-6">
+                    <div className="flex flex-wrap gap-2">
+                      {selectedProject.category && (
+                        <span className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold">
+                          {selectedProject.category}
+                        </span>
+                      )}
+                      {selectedProject.subcategories?.map((subcategory) => (
+                        <span
+                          key={subcategory}
+                          className="px-3 py-1.5 rounded-full bg-foreground/5 text-foreground/70 text-sm font-semibold"
+                        >
+                          {subcategory}
+                        </span>
+                      ))}
+                    </div>
+
                     {/* URL Display */}
                     <div className="flex flex-col sm:flex-row gap-3">
                       <div className="flex-1 flex items-center gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10">

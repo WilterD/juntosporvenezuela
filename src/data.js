@@ -8,7 +8,9 @@ export const projectsData = [
     url: "https://build4venezuela.com/",
     hasApi: false,
     apiUrl: "",
-    images: ["./img/build4vzla.png"]
+    images: ["./img/build4vzla.png"],
+    category: "Infraestructura",
+    subcategories: ["Voluntario", "Ingeniero"]
   },
   {
     id: 2,
@@ -18,7 +20,9 @@ export const projectsData = [
     fullDescription: "Red Ayuda Venezuela permite a los ciudadanos publicar necesidades urgentes (insumos médicos, alimentos, rescate) y a las organizaciones coordinar la respuesta. Su sistema de mapeo ayuda a distribuir eficientemente los recursos donados a las zonas más afectadas.",
     url: "https://redayudavenezuela.com/ayuda/necesidades",
     hasApi: false,
-    images: ["./img/red_ayuda.png"]
+    images: ["./img/red_ayuda.png"],
+    category: "Logística",
+    subcategories: ["Damnificado", "Voluntario", "Donante"]
   },
   {
     id: 3,
@@ -29,7 +33,9 @@ export const projectsData = [
     url: "https://venezuelareporta.org",
     hasApi: true,
     apiUrl: "https://venezuelareporta.org/api-abierta",
-    images: ["./img/vzla_reporta.png"]
+    images: ["./img/vzla_reporta.png"],
+    category: "Comunicación",
+    subcategories: ["Damnificado", "Voluntario", "Operador"]
   },
   {
     id: 4,
@@ -39,7 +45,9 @@ export const projectsData = [
     fullDescription: "Tras los recientes eventos sísmicos, Reencuentra VE ofrece una base de datos segura y de fácil acceso donde familiares pueden publicar fotos y datos de personas extraviadas, y los refugios o rescatistas pueden reportar a las personas que han sido localizadas.",
     url: "https://reencuentra-ve.vercel.app",
     hasApi: false,
-    images: ["./img/reencuentra.png"]
+    images: ["./img/reencuentra.png"],
+    category: "Localización",
+    subcategories: ["Familiar", "Rescatista", "Damnificado"]
   },
   {
     id: 5,
@@ -49,7 +57,9 @@ export const projectsData = [
     fullDescription: "Encuentrame VE es una iniciativa solidaria diseñada para consolidar la información de personas extraviadas o no localizadas. Permite a familiares, voluntarios y organizaciones registrar reportes detallados, agilizando los esfuerzos de búsqueda y reencuentro familiar.",
     url: "https://encuentrame-ve.com/",
     hasApi: false,
-    images: ["./img/encuentrameve.png"]
+    images: ["./img/encuentrameve.png"],
+    category: "Localización",
+    subcategories: ["Familiar", "Voluntario", "Damnificado"]
   },
   {
     id: 6,
@@ -60,7 +70,9 @@ export const projectsData = [
     url: "https://t.me/localizadosvzla2026_bot",
     hasApi: true,
     apiUrl: "",
-    images: ["./img/bot_telegram.jpeg"]
+    images: ["./img/bot_telegram.jpeg"],
+    category: "Localización",
+    subcategories: ["Familiar", "Rescatista", "Operador"]
   },
   {
     id: 7,
@@ -70,7 +82,9 @@ export const projectsData = [
     fullDescription: "Técnicos Por Venezuela es un espacio dedicado a canalizar reportes de averías o necesidades de infraestructura técnica crítica. Voluntarios especialistas pueden visualizar el mapa de casos, priorizar incidencias y coordinar esfuerzos para el restablecimiento de servicios.",
     url: "https://tecnicosporvenezuela.com/casos",
     hasApi: false,
-    images: ["./img/tecnicos.png"]
+    images: ["./img/tecnicos.png"],
+    category: "Infraestructura",
+    subcategories: ["Damnificado", "Voluntario", "Ingeniero", "Operador"]
   },
   {
     id: 8,
@@ -80,7 +94,9 @@ export const projectsData = [
     fullDescription: "Hazlo Hoy centraliza los esfuerzos de donación y asistencia directa a las víctimas de los sismos recientes. Facilita la logística de entrega y fomenta la participación ciudadana para llevar recursos de primera necesidad a las comunidades más afectadas.",
     url: "https://terremoto.hazlohoy.org/",
     hasApi: false,
-    images: ["./img/hazlohoy.png"]
+    images: ["./img/hazlohoy.png"],
+    category: "Donaciones",
+    subcategories: ["Damnificado", "Voluntario", "Donante"]
   },
   {
     id: 9,
@@ -90,7 +106,9 @@ export const projectsData = [
     fullDescription: "Buscar por nombre/cédula, reportar, marcar como encontrado. Sin necesidad de registro. Fuente verificada activa por CNN / El Caribe.",
     url: "https://desaparecidosterremotovenezuela.com",
     hasApi: false,
-    images: ["./img/desaparecidosterremotovenezuela.png"]
+    images: ["./img/desaparecidosterremotovenezuela.png"],
+    category: "Localización",
+    subcategories: ["Familiar", "Damnificado", "Rescatista"]
   },
   {
     id: 10,
@@ -100,7 +118,9 @@ export const projectsData = [
     fullDescription: "Permite buscar, registrar y marcar como localizado. Esfuerzo de búsqueda activa respaldado por El Caribe.",
     url: "https://venezuelatebusca.com",
     hasApi: false,
-    images: ["./img/venezuelatebusca.png"]
+    images: ["./img/venezuelatebusca.png"],
+    category: "Localización",
+    subcategories: ["Familiar", "Damnificado", "Voluntario"]
   },
   {
     id: 11,
@@ -110,7 +130,9 @@ export const projectsData = [
     fullDescription: "Plataforma enfocada específicamente en registrar e identificar personas que han sido trasladadas a centros hospitalarios tras la emergencia.",
     url: "https://encuentramevzla.com",
     hasApi: false,
-    images: ["./img/encuentramevzla.png"]
+    images: ["./img/encuentramevzla.png"],
+    category: "Salud",
+    subcategories: ["Familiar", "Damnificado", "Médico"]
   },
   {
     id: 12,
@@ -121,7 +143,9 @@ export const projectsData = [
     url: "https://venezuela-earthquake-map.vercel.app/",
     hasApi: true,
     apiUrl: "https://github.com/nochinxx/venezuela-earthquake-map",
-    images: ["./img/venezuela-earthquake-map.png"]
+    images: ["./img/venezuela-earthquake-map.png"],
+    category: "Localización",
+    subcategories: ["Rescatista", "Voluntario", "Operador"]
   },
   {
     id: 13,
@@ -131,7 +155,9 @@ export const projectsData = [
     fullDescription: "Yummy moviliza repartidores para llevar agua, alimentos y medicamentos sin costo a refugios. Permite reporte directo desde la aplicación.",
     url: "https://sos.yummyrides.com",
     hasApi: false,
-    images: ["./img/yummysos.png"]
+    images: ["./img/yummysos.png"],
+    category: "Logística",
+    subcategories: ["Damnificado", "Voluntario", "Operador"]
   },
   {
     id: 14,
@@ -141,7 +167,9 @@ export const projectsData = [
     fullDescription: "Agregador verificado: plataformas de búsqueda, instrucciones de supervivencia, canales de donación. Links a GlobalGiving, UNICEF y Cruz Roja.",
     url: "https://recursos-venezuela.netlify.app",
     hasApi: false,
-    images: ["./img/recursos-venezuela.png"]
+    images: ["./img/recursos-venezuela.png"],
+    category: "Comunicación",
+    subcategories: ["Familiar", "Damnificado", "Donante"]
   },
   {
     id: 15,
@@ -151,7 +179,9 @@ export const projectsData = [
     fullDescription: "Canal oficial. Bizum al 33512 o SMS VENEZUELA al 38092 (6€ íntegros). Coordinación directa con la Cruz Roja Venezolana.",
     url: "https://www2.cruzroja.es/-/ayuda-terremoto-venezuela-2026",
     hasApi: false,
-    images: ["./img/cruz_roja.png"]
+    images: ["./img/cruz_roja.png"],
+    category: "Donaciones",
+    subcategories: ["Donante", "Damnificado"]
   },
 
   {
@@ -162,7 +192,9 @@ export const projectsData = [
     fullDescription: "Impulsado por la Universidad Católica Andrés Bello (UCAB). Tel: 0414-121 78 82 / 0424-172 39 81. Solo disponible dentro de Venezuela.",
     url: "tel:04141217882",
     hasApi: false,
-    images: ["./img/logo-ucab.png"]
+    images: ["./img/logo-ucab.png"],
+    category: "Salud",
+    subcategories: ["Damnificado", "Psicólogo"]
   },
   {
     id: 22,
@@ -172,7 +204,9 @@ export const projectsData = [
     fullDescription: "Atención especializada para personas afectadas física y emocionalmente tras la emergencia, centralizando soporte a través de su plataforma.",
     url: "https://www.instagram.com/venemergencia",
     hasApi: false,
-    images: ["./img/ven_emergencia.png"]
+    images: ["./img/ven_emergencia.png"],
+    category: "Salud",
+    subcategories: ["Damnificado", "Médico", "Psicólogo"]
   },
 
   {
@@ -183,7 +217,9 @@ export const projectsData = [
     fullDescription: "Heatmap en tiempo real. Agrega reportes de YouTube, X/Twitter e Instagram cada 10 min. Centros de acopio verificados. Directorio 30+ hospitales.",
     url: "https://www.terremotovenezuela.com",
     hasApi: false,
-    images: ["./img/terremotovenezuela.png"]
+    images: ["./img/terremotovenezuela.png"],
+    category: "Localización",
+    subcategories: ["Rescatista", "Voluntario", "Operador"]
   },
   {
     id: 27,
@@ -193,7 +229,9 @@ export const projectsData = [
     fullDescription: "Gestión y trazabilidad en tiempo real de insumos médicos, necesidades logísticas y puntos de donación o recepción para OCHA/ONU.",
     url: "https://responsegrid.app/",
     hasApi: false,
-    images: ["./img/responsegrid.png"]
+    images: ["./img/responsegrid.png"],
+    category: "Logística",
+    subcategories: ["Voluntario", "Operador", "Donante", "Médico"]
   },
   {
     id: 28,
@@ -203,7 +241,9 @@ export const projectsData = [
     fullDescription: "Conecta a quién necesita ayuda con quién puede darla. Registro de voluntarios, reporte de casos urgentes, albergues y sus necesidades, mapa en vivo y movilización por WhatsApp.",
     url: "https://ayudavenezuela2026.com",
     hasApi: false,
-    images: ["./img/ayudavenezuela2026.png"]
+    images: ["./img/ayudavenezuela2026.png"],
+    category: "Logística",
+    subcategories: ["Damnificado", "Voluntario", "Donante"]
   },
   {
     id: 29,
@@ -214,7 +254,9 @@ export const projectsData = [
     url: "https://civisvenezuela.com",
     hasApi: true,
     apiUrl: "https://civisvenezuela.com/api",
-    images: ["./img/civisvenezuela.png"]
+    images: ["./img/civisvenezuela.png"],
+    category: "Localización",
+    subcategories: ["Familiar", "Rescatista", "Voluntario"]
   },
   {
     id: 30,
@@ -224,7 +266,9 @@ export const projectsData = [
     fullDescription: "Rescata Venezuela es una plataforma integral destinada a facilitar y agilizar la respuesta ante emergencias, centralizando esfuerzos de rescate, atención médica primaria y recolección de insumos vitales para las comunidades más impactadas por los sismos.",
     url: "https://www.rescatavenezuela.com/",
     hasApi: false,
-    images: ["./img/rescatavenezuela.png"]
+    images: ["./img/rescatavenezuela.png"],
+    category: "Logística",
+    subcategories: ["Rescatista", "Damnificado", "Médico", "Voluntario"]
   },
   {
     id: 31,
@@ -234,7 +278,9 @@ export const projectsData = [
     fullDescription: "¿Tu edificio resultó dañado por el sismo? Ingenieros civiles voluntarios revisarán las fotos que envíes y te entregarán un informe de evaluación por correo electrónico en el menor tiempo posible.",
     url: "https://www.sismoayudave.com",
     hasApi: false,
-    images: ["./img/sismoayudave.png"]
+    images: ["./img/sismoayudave.png"],
+    category: "Infraestructura",
+    subcategories: ["Damnificado", "Ingeniero"]
   },
   {
     id: 32,
@@ -244,7 +290,9 @@ export const projectsData = [
     fullDescription: "Zerena es un espacio de apoyo de primera instancia basado en los Primeros Auxilios Psicológicos (OMS/OPS). No es terapia, no diagnostica y no reemplaza la atención de un profesional ni los servicios de emergencia.",
     url: "https://zerena.help/",
     hasApi: false,
-    images: ["./img/zerena.png"]
+    images: ["./img/zerena.png"],
+    category: "Salud",
+    subcategories: ["Damnificado", "Psicólogo"]
   },
   {
     id: 33,
@@ -254,7 +302,9 @@ export const projectsData = [
     fullDescription: "Iniciativa que unifica información logística de entrega de suministros. Conecta a voluntarios en puntos de acopio y refugios improvisados, mejorando el traslado y redirigiendo más eficazmente los recursos.",
     url: "https://acopiovenezuela.netlify.app/",
     hasApi: false,
-    images: ["./img/acopiovenezuela.png"]
+    images: ["./img/acopiovenezuela.png"],
+    category: "Logística",
+    subcategories: ["Voluntario", "Donante", "Operador"]
   },
   {
     id: 34,
@@ -265,7 +315,9 @@ export const projectsData = [
     url: "https://aidtrace-rastroayuda.vercel.app/",
     hasApi: true,
     apiUrl: "https://t.me/AidTrace_Bot",
-    images: ["./img/aidtrace.png"]
+    images: ["./img/aidtrace.png"],
+    category: "Logística",
+    subcategories: ["Voluntario", "Operador", "Donante"]
   },
   {
     id: 35,
@@ -275,7 +327,9 @@ export const projectsData = [
     fullDescription: "Sin señal, sin internet, la red sigue viva. GuacaMalla retransmite tu auxilio de teléfono en teléfono en zonas sin torres celulares o con pobre conexión. La autenticidad viaja firmada en cada señal, logrando comunicar y localizar a las personas.",
     url: "https://www.guacamalla.org/",
     hasApi: false,
-    images: ["./img/guacamaya.png"]
+    images: ["./img/guacamaya.png"],
+    category: "Comunicación",
+    subcategories: ["Damnificado", "Rescatista", "Voluntario"]
   },
   {
     id: 36,
@@ -285,7 +339,9 @@ export const projectsData = [
     fullDescription: "Confía contrasta rumores falsos con fuentes oficiales (FUNVISIS, Protección Civil, Cruz Roja) y hace análisis on-chain en vivo (antigüedad, historial y saldo) de las 'wallets de donación' marcando su riesgo 🔴/🟡/🟢. Funciona desde el navegador, en español y sin registro.",
     url: "https://confia-rose.vercel.app",
     hasApi: false,
-    images: ["./img/confia.png"]
+    images: ["./img/confia.png"],
+    category: "Comunicación",
+    subcategories: ["Donante", "Voluntario", "Operador"]
   },
   {
     id: 37,
@@ -295,7 +351,9 @@ export const projectsData = [
     fullDescription: "Plataforma centralizada para la coordinación de recursos, asistencia y apoyo durante la situación de emergencia, enlazando necesidades con puntos de asistencia temprana.",
     url: "https://redh.avapre.com/",
     hasApi: false,
-    images: ["./img/redh.avapre.png"]
+    images: ["./img/redh.avapre.png"],
+    category: "Logística",
+    subcategories: ["Damnificado", "Voluntario", "Operador"]
   },
   {
     id: 38,
@@ -305,7 +363,9 @@ export const projectsData = [
     fullDescription: "Iniciativa orientada a maximizar el impacto de las donaciones y recursos enviados a los afectados por la emergencia, conectando iniciativas y esfuerzos humanitarios a nivel nacional.",
     url: "https://www.ayudavnzla.org/",
     hasApi: false,
-    images: ["./img/ayudavnzla.png"]
+    images: ["./img/ayudavnzla.png"],
+    category: "Donaciones",
+    subcategories: ["Donante", "Damnificado", "Voluntario"]
   },
   {
     id: 39,
@@ -315,7 +375,9 @@ export const projectsData = [
     fullDescription: "Plataforma para registrar donaciones y divulgación de inventarios en tiempo real de todos los centros de acopio registrados para tener mayor visibilidad. Si eres jefe de un centro de acopio puedes registrar el centro y luego será validado por su equipo para que todos puedan visualizarlo.",
     url: "https://www.redacopiovnzla.com/",
     hasApi: false,
-    images: ["./img/redacopiovnzla.png"]
+    images: ["./img/redacopiovnzla.png"],
+    category: "Donaciones",
+    subcategories: ["Donante", "Voluntario", "Operador"]
   },
   {
     id: 40,
@@ -326,7 +388,9 @@ export const projectsData = [
     url: "https://t.me/palmedicoai_bot",
     hasApi: true,
     apiUrl: "https://t.me/palmedicoai_bot",
-    images: ["./img/palmedico.jpeg"]
+    images: ["./img/palmedico.jpeg"],
+    category: "Localización",
+    subcategories: ["Familiar", "Médico", "Operador"]
   },
   {
     id: 41,
@@ -337,7 +401,9 @@ export const projectsData = [
     url: "https://voluntariosvenezuela.org/registro",
     hasApi: false,
     apiUrl: "",
-    images: ["./img/voluntariosvenezuela.png"]
+    images: ["./img/voluntariosvenezuela.png"],
+    category: "Logística",
+    subcategories: ["Voluntario", "Rescatista", "Médico", "Psicólogo", "Ingeniero", "Veterinario"]
   },
   {
     id: 42,
@@ -348,7 +414,9 @@ export const projectsData = [
     url: "https://venezuelajuntos.online/",
     hasApi: false,
     apiUrl: "",
-    images: ["./img/venezuelajuntos.png"]
+    images: ["./img/venezuelajuntos.png"],
+    category: "Localización",
+    subcategories: ["Familiar", "Damnificado", "Voluntario", "Veterinario"]
   },
   {
     id: 43,
@@ -359,6 +427,8 @@ export const projectsData = [
     url: "https://localizapacientes.com",
     hasApi: false,
     apiUrl: "",
-    images: ["./img/localizapacientes.png"]
+    images: ["./img/localizapacientes.png"],
+    category: "Salud",
+    subcategories: ["Familiar", "Damnificado", "Médico"]
   }
 ];
