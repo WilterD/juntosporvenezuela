@@ -1,5 +1,4 @@
 import { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Search, ExternalLink, X, MapPin, Info, SlidersHorizontal } from 'lucide-react';
 import { projectsData } from './data';
 import './index.css'; // Just in case, usually in main.jsx
@@ -96,12 +95,7 @@ function App() {
 
       {/* Header */}
       <header className="pt-8 pb-12 px-6 relative z-10 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto"
-        >
+        <div className="hero-content max-w-3xl mx-auto">
           <div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-primary/10 text-primary font-semibold text-sm tracking-wide">
             Juntos por Venezuela
           </div>
@@ -196,24 +190,19 @@ function App() {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
       </header>
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-6 pb-24 relative z-10">
         <div className="flex flex-wrap justify-center gap-8">
-          <AnimatePresence>
-            {filteredProjects.length > 0 ? (
-              filteredProjects.map((project, index) => (
-                <motion.div
-                  layout
-                  initial={hasActiveFilters ? false : { opacity: 0, y: 40 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={hasActiveFilters ? { duration: 0 } : { duration: 0.5, delay: index * 0.1 }}
-                  exit={hasActiveFilters ? { opacity: 0 } : { opacity: 0, scale: 0.9 }}
-                  key={project.id}
-                  className="w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)]"
-                >
+          {filteredProjects.length > 0 ? (
+            filteredProjects.map((project, index) => (
+              <div
+                key={project.id}
+                className="project-card w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)]"
+                style={{ '--card-index': index }}
+              >
                   <div
                     onClick={() => openModal(project)}
                     className="glass-card rounded-3xl overflow-hidden cursor-pointer group h-full flex flex-col hover:-translate-y-2 transition-transform duration-300 hover:shadow-xl hover:shadow-primary/10 border border-border/50"
@@ -222,6 +211,11 @@ function App() {
                       <img
                         src={project.thumbnail}
                         alt={project.name}
+                        loading={index < 3 ? 'eager' : 'lazy'}
+                        fetchPriority={index < 3 ? 'high' : 'auto'}
+                        decoding="async"
+                        width="640"
+                        height="360"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -259,14 +253,10 @@ function App() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
-              ))
-            ) : (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="w-full py-20 text-center"
-              >
+                </div>
+            ))
+          ) : (
+              <div className="w-full py-20 text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4">
                   <Search className="h-8 w-8" />
                 </div>
@@ -281,9 +271,8 @@ function App() {
                     Limpiar filtros
                   </button>
                 )}
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
         </div>
       </main>
 
@@ -303,29 +292,24 @@ function App() {
       </footer>
 
       {/* Modal */}
-      <AnimatePresence>
-        {selectedProject && (
+      {selectedProject && (
           <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+            <div
               onClick={closeModal}
-              className="modal-backdrop fixed inset-0 bg-background/80 backdrop-blur-sm z-50"
+              className="modal-backdrop fixed inset-0 bg-background/80 z-50"
             />
             <div className="modal-scroll fixed inset-0 overflow-y-auto z-50 pointer-events-none flex items-center justify-center p-4 sm:p-6">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                className="modal-panel w-full max-w-3xl glass-card bg-card rounded-[2rem] shadow-2xl overflow-hidden pointer-events-auto flex flex-col max-h-[90vh]"
-              >
+              <div className="modal-panel w-full max-w-3xl glass-card bg-card rounded-[2rem] shadow-2xl overflow-hidden pointer-events-auto flex flex-col max-h-[90vh]">
                 {/* Modal Header & Image */}
                 <div className="relative h-64 sm:h-80 shrink-0">
                   <img
                     src={selectedProject.thumbnail}
                     alt={selectedProject.name}
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    width="960"
+                    height="540"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -413,14 +397,8 @@ function App() {
                         {selectedProject.description}
                       </p>
 
-                      <AnimatePresence>
-                        {showFullDescription && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            className="overflow-hidden"
-                          >
+                      {showFullDescription && (
+                          <div className="overflow-hidden">
                             <p className="text-foreground/80 leading-relaxed mt-4">
                               {selectedProject.fullDescription}
                             </p>
@@ -432,14 +410,17 @@ function App() {
                                     key={idx}
                                     src={img}
                                     alt={`Gallery ${idx + 1}`}
+                                    loading="lazy"
+                                    decoding="async"
+                                    width="480"
+                                    height="270"
                                     className="w-full h-48 object-cover rounded-xl shadow-sm border border-border/50"
                                   />
                                 ))}
                               </div>
                             )}
-                          </motion.div>
+                          </div>
                         )}
-                      </AnimatePresence>
 
                       {!showFullDescription && (
                         <button
@@ -452,11 +433,10 @@ function App() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </>
         )}
-      </AnimatePresence>
     </div>
   );
 }
