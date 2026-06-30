@@ -1,21 +1,40 @@
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, ExternalLink, X, MapPin, Info } from 'lucide-react';
+import { Search, ExternalLink, X, MapPin, Info, Tag } from 'lucide-react';
 import { projectsData } from './data';
-import './index.css'; // Just in case, usually in main.jsx
+import './index.css';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedProject, setSelectedProject] = useState(null);
   const [showFullDescription, setShowFullDescription] = useState(false);
+  const [selectedTags, setSelectedTags] = useState([]);
 
-  // Filter projects based on search term
-  const filteredProjects = useMemo(() => {
-    return projectsData.filter((project) =>
-      project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.description.toLowerCase().includes(searchTerm.toLowerCase())
+  const allTags = useMemo(() => {
+    const tagSet = new Set();
+    projectsData.forEach((project) => project.tags.forEach((tag) => tagSet.add(tag)));
+    return Array.from(tagSet).sort();
+  }, []);
+
+  const toggleTag = (tag) => {
+    setSelectedTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
     );
-  }, [searchTerm]);
+  };
+
+  const filteredProjects = useMemo(() => {
+    return projectsData
+      .filter((project) => {
+        const matchesSearch =
+          project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          project.description.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesTags =
+          selectedTags.length === 0 ||
+          selectedTags.every((tag) => project.tags.includes(tag));
+        return matchesSearch && matchesTags;
+      })
+      .sort((a, b) => a.order - b.order);
+  }, [searchTerm, selectedTags]);
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -29,11 +48,9 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Abstract Background Design */}
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px] pointer-events-none" />
 
-      {/* Top Nav */}
       <nav className="relative z-20 w-full px-6 pt-6 flex justify-end max-w-7xl mx-auto">
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSdJS1l8bEX_ewBamPc-L-DfKMUUjIqLqT2qsnJjSP2oRpBd9A/viewform?usp=header"
@@ -45,7 +62,6 @@ function App() {
         </a>
       </nav>
 
-      {/* Header */}
       <header className="pt-8 pb-12 px-6 relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -63,8 +79,7 @@ function App() {
             Plataforma dedicada a dar visibilidad a los proyectos web y tecnológicos venezolanos creados para asistir y brindar apoyo tras los recientes eventos sísmicos.
           </p>
 
-          {/* Search Bar */}
-          <div className="relative max-w-xl mx-auto group">
+          <div className="relative max-w-xl mx-auto group mb-6">
             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-foreground/40 group-focus-within:text-primary transition-colors">
               <Search className="h-5 w-5" />
             </div>
@@ -76,10 +91,26 @@ function App() {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
+
+          <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
+            {allTags.map((tag) => (
+              <button
+                key={tag}
+                onClick={() => toggleTag(tag)}
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all border ${
+                  selectedTags.includes(tag)
+                    ? 'bg-primary text-primary-foreground border-primary shadow-md shadow-primary/20'
+                    : 'bg-card text-foreground/70 border-border/50 hover:border-primary/50 hover:text-foreground'
+                }`}
+              >
+                <Tag className="w-3.5 h-3.5" />
+                {tag}
+              </button>
+            ))}
+          </div>
         </motion.div>
       </header>
 
-      {/* Main Content */}
       <main className="max-w-7xl mx-auto px-6 pb-24 relative z-10">
         <div className="flex flex-wrap justify-center gap-8">
           <AnimatePresence>
@@ -123,6 +154,16 @@ function App() {
                       <p className="text-foreground/70 line-clamp-3 mb-4 flex-grow text-sm leading-relaxed">
                         {project.description}
                       </p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {project.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="px-2 py-0.5 rounded-md bg-primary/10 text-primary text-xs font-medium"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </motion.div>
@@ -144,7 +185,6 @@ function App() {
         </div>
       </main>
 
-      {/* Footer */}
       <footer className="relative z-10 w-full py-8 border-t border-border/50 bg-card/30 backdrop-blur-sm mt-auto text-center">
         <p className="text-foreground/70 font-medium text-sm">
           Desarrollado por{' '}
@@ -159,7 +199,6 @@ function App() {
         </p>
       </footer>
 
-      {/* Modal */}
       <AnimatePresence>
         {selectedProject && (
           <>
@@ -178,7 +217,6 @@ function App() {
                 transition={{ type: "spring", damping: 25, stiffness: 300 }}
                 className="w-full max-w-3xl glass-card bg-card rounded-[2rem] shadow-2xl overflow-hidden pointer-events-auto flex flex-col max-h-[90vh]"
               >
-                {/* Modal Header & Image */}
                 <div className="relative h-64 sm:h-80 shrink-0">
                   <img
                     src={selectedProject.thumbnail}
@@ -212,10 +250,8 @@ function App() {
                   </div>
                 </div>
 
-                {/* Modal Content */}
                 <div className="p-6 sm:p-8 overflow-y-auto">
                   <div className="flex flex-col gap-6">
-                    {/* URL Display */}
                     <div className="flex flex-col sm:flex-row gap-3">
                       <div className="flex-1 flex items-center gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10">
                         <ExternalLink className="w-5 h-5 text-primary shrink-0" />
@@ -247,7 +283,6 @@ function App() {
                       )}
                     </div>
 
-                    {/* Description Section */}
                     <div>
                       <h4 className="text-lg font-semibold text-foreground mb-3">Sobre el proyecto</h4>
                       <p className="text-foreground/80 leading-relaxed">
