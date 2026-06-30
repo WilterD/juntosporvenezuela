@@ -77,10 +77,10 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
+    <div className="app-shell min-h-screen bg-background relative overflow-hidden">
       {/* Abstract Background Design */}
-      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px] pointer-events-none" />
+      <div className="safari-blur absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px] pointer-events-none" />
+      <div className="safari-blur absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px] pointer-events-none" />
 
       {/* Top Nav */}
       <nav className="relative z-20 w-full px-6 pt-6 flex justify-end max-w-7xl mx-auto">
@@ -311,15 +311,15 @@ function App() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={closeModal}
-              className="fixed inset-0 bg-background/80 backdrop-blur-sm z-50"
+              className="modal-backdrop fixed inset-0 bg-background/80 backdrop-blur-sm z-50"
             />
-            <div className="fixed inset-0 overflow-y-auto z-50 pointer-events-none flex items-center justify-center p-4 sm:p-6">
+            <div className="modal-scroll fixed inset-0 overflow-y-auto z-50 pointer-events-none flex items-center justify-center p-4 sm:p-6">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                className="w-full max-w-3xl glass-card bg-card rounded-[2rem] shadow-2xl overflow-hidden pointer-events-auto flex flex-col max-h-[90vh]"
+                className="modal-panel w-full max-w-3xl glass-card bg-card rounded-[2rem] shadow-2xl overflow-hidden pointer-events-auto flex flex-col max-h-[90vh]"
               >
                 {/* Modal Header & Image */}
                 <div className="relative h-64 sm:h-80 shrink-0">
@@ -356,7 +356,7 @@ function App() {
                 </div>
 
                 {/* Modal Content */}
-                <div className="p-6 sm:p-8 overflow-y-auto">
+                <div className="modal-content p-6 sm:p-8 overflow-y-auto">
                   <div className="flex flex-col gap-6">
                     <div className="flex flex-wrap gap-2">
                       {selectedProject.category && (
