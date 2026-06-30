@@ -10,7 +10,9 @@ export const projectsData = [
         apiUrl: "",
         images: ["./img/build4vzla.png"],
         category: "Infraestructura",
-        subcategories: ["Voluntario", "Ingeniero"]
+        subcategories: ["Voluntario", "Ingeniero"],
+        order: 1,
+        tags: ["hackathon", "tecnologia", "codigo-abierto", "infraestructura"]
     },
     {
         id: 2,
@@ -22,7 +24,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/red_ayuda.png"],
         category: "Logística",
-        subcategories: ["Damnificado", "Voluntario", "Donante"]
+        subcategories: ["Damnificado", "Voluntario", "Donante"],
+        order: 2,
+        tags: ["ayuda", "mapeo", "donaciones", "logistica"]
     },
     {
         id: 3,
@@ -35,7 +39,37 @@ export const projectsData = [
         apiUrl: "https://venezuelareporta.org/api-abierta",
         images: ["./img/vzla_reporta.png"],
         category: "Comunicación",
-        subcategories: ["Damnificado", "Voluntario", "Operador"]
+        subcategories: ["Damnificado", "Voluntario", "Operador"],
+        order: 3,
+        tags: ["reporte", "ciudadano", "servicios", "comunicacion"]
+    },
+    {
+        id: 44,
+        name: "VZLA Ayuda",
+        thumbnail: "./img/vzlayuda.png",
+        description: "Encuentra o brinda ayuda cerca de ti. Sin cuentas, al instante.",
+        fullDescription: "VZLA Ayuda es una iniciativa ciudadana que permite encontrar o brindar ayuda cerca de ti sin necesidad de cuentas y de forma instantánea. Conecta a quienes necesitan ayuda con quienes pueden ofrecerla.",
+        url: "https://vzlayuda.com",
+        hasApi: false,
+        images: ["./img/vzlayuda.png"],
+        category: "Logística",
+        subcategories: ["Damnificado", "Voluntario", "Donante"],
+        order: 4,
+        tags: ["ayuda", "busqueda", "ciudadano", "logistica"]
+    },
+    {
+        id: 45,
+        name: "Red por Venezuela",
+        thumbnail: "./img/redporvenezuela.png",
+        description: "Toda la ayuda para Venezuela, en un solo lugar. Índice de publicaciones de redes sociales clasificadas.",
+        fullDescription: "Red por Venezuela reúne y clasifica publicaciones de Instagram, Facebook y X sobre la emergencia sin modificarlas. Cada dato muestra su resumen, extracto original y link a la fuente. Es un índice informativo, no una fuente original.",
+        url: "https://redporvenezuela.com",
+        hasApi: false,
+        images: ["./img/redporvenezuela.png"],
+        category: "Comunicación",
+        subcategories: ["Damnificado", "Voluntario", "Donante"],
+        order: 5,
+        tags: ["indice", "redes-sociales", "emergencia", "comunicacion"]
     },
     {
         id: 4,
@@ -47,7 +81,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/reencuentra.png"],
         category: "Localización",
-        subcategories: ["Familiar", "Rescatista", "Damnificado"]
+        subcategories: ["Familiar", "Rescatista", "Damnificado"],
+        order: 6,
+        tags: ["busqueda", "personas", "desaparecidos", "localizacion"]
     },
     {
         id: 5,
@@ -59,7 +95,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/encuentrameve.png"],
         category: "Localización",
-        subcategories: ["Familiar", "Voluntario", "Damnificado"]
+        subcategories: ["Familiar", "Voluntario", "Damnificado"],
+        order: 7,
+        tags: ["busqueda", "personas", "desaparecidos", "localizacion"]
     },
     {
         id: 6,
@@ -72,7 +110,9 @@ export const projectsData = [
         apiUrl: "",
         images: ["./img/bot_telegram.jpeg"],
         category: "Localización",
-        subcategories: ["Familiar", "Rescatista", "Operador"]
+        subcategories: ["Familiar", "Rescatista", "Operador"],
+        order: 8,
+        tags: ["bot", "telegram", "whatsapp", "desaparecidos", "localizacion"]
     },
     {
         id: 7,
@@ -84,7 +124,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/tecnicos.png"],
         category: "Infraestructura",
-        subcategories: ["Damnificado", "Voluntario", "Ingeniero", "Operador"]
+        subcategories: ["Damnificado", "Voluntario", "Ingeniero", "Operador"],
+        order: 9,
+        tags: ["tecnico", "infraestructura", "voluntarios"]
     },
     {
         id: 8,
@@ -96,7 +138,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/hazlohoy.png"],
         category: "Donaciones",
-        subcategories: ["Damnificado", "Voluntario", "Donante"]
+        subcategories: ["Damnificado", "Voluntario", "Donante"],
+        order: 10,
+        tags: ["donaciones", "acopio", "solidaridad", "logistica"]
     },
     {
         id: 9,
@@ -108,7 +152,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/desaparecidosterremotovenezuela.png"],
         category: "Localización",
-        subcategories: ["Familiar", "Damnificado", "Rescatista"]
+        subcategories: ["Familiar", "Damnificado", "Rescatista"],
+        order: 11,
+        tags: ["busqueda", "desaparecidos", "terremoto", "localizacion"]
     },
     {
         id: 10,
@@ -120,7 +166,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/venezuelatebusca.png"],
         category: "Localización",
-        subcategories: ["Familiar", "Damnificado", "Voluntario"]
+        subcategories: ["Familiar", "Damnificado", "Voluntario"],
+        order: 12,
+        tags: ["busqueda", "desaparecidos", "terremoto", "localizacion"]
     },
     {
         id: 11,
@@ -132,7 +180,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/encuentramevzla.png"],
         category: "Salud",
-        subcategories: ["Familiar", "Damnificado", "Médico"]
+        subcategories: ["Familiar", "Damnificado", "Médico"],
+        order: 13,
+        tags: ["hospital", "busqueda", "desaparecidos", "salud"]
     },
     {
         id: 12,
@@ -145,7 +195,9 @@ export const projectsData = [
         apiUrl: "https://github.com/nochinxx/venezuela-earthquake-map",
         images: ["./img/venezuela-earthquake-map.png"],
         category: "Localización",
-        subcategories: ["Rescatista", "Voluntario", "Operador"]
+        subcategories: ["Rescatista", "Voluntario", "Operador"],
+        order: 14,
+        tags: ["heatmap", "codigo-abierto", "github", "localizacion"]
     },
     {
         id: 13,
@@ -157,7 +209,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/yummysos.png"],
         category: "Logística",
-        subcategories: ["Damnificado", "Voluntario", "Operador"]
+        subcategories: ["Damnificado", "Voluntario", "Operador"],
+        order: 15,
+        tags: ["repartidores", "ayuda", "app", "logistica"]
     },
     {
         id: 14,
@@ -169,7 +223,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/recursos-venezuela.png"],
         category: "Comunicación",
-        subcategories: ["Familiar", "Damnificado", "Donante"]
+        subcategories: ["Familiar", "Damnificado", "Donante"],
+        order: 16,
+        tags: ["agregador", "recursos", "donaciones", "comunicacion"]
     },
     {
         id: 15,
@@ -181,7 +237,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/cruz_roja.png"],
         category: "Donaciones",
-        subcategories: ["Donante", "Damnificado"]
+        subcategories: ["Donante", "Damnificado"],
+        order: 17,
+        tags: ["donaciones", "cruz-roja", "oficial"]
     },
     {
         id: 21,
@@ -193,7 +251,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/logo-ucab.png"],
         category: "Salud",
-        subcategories: ["Damnificado", "Psicólogo"]
+        subcategories: ["Damnificado", "Psicólogo"],
+        order: 18,
+        tags: ["psicologia", "telefono", "ucab", "salud"]
     },
     {
         id: 22,
@@ -205,7 +265,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/ven_emergencia.png"],
         category: "Salud",
-        subcategories: ["Damnificado", "Médico", "Psicólogo"]
+        subcategories: ["Damnificado", "Médico", "Psicólogo"],
+        order: 19,
+        tags: ["medico", "psicologico", "emergencia", "salud"]
     },
     {
         id: 26,
@@ -217,7 +279,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/terremotovenezuela.png"],
         category: "Localización",
-        subcategories: ["Rescatista", "Voluntario", "Operador"]
+        subcategories: ["Rescatista", "Voluntario", "Operador"],
+        order: 20,
+        tags: ["heatmap", "incidentes", "tiempo-real", "localizacion"]
     },
     {
         id: 27,
@@ -229,7 +293,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/responsegrid.png"],
         category: "Logística",
-        subcategories: ["Voluntario", "Operador", "Donante", "Médico"]
+        subcategories: ["Voluntario", "Operador", "Donante", "Médico"],
+        order: 21,
+        tags: ["insumos", "logistica", "onu"]
     },
     {
         id: 28,
@@ -241,7 +307,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/ayudavenezuela2026.png"],
         category: "Logística",
-        subcategories: ["Damnificado", "Voluntario", "Donante"]
+        subcategories: ["Damnificado", "Voluntario", "Donante"],
+        order: 22,
+        tags: ["ayuda-humanitaria", "voluntarios", "mapeo", "logistica"]
     },
     {
         id: 29,
@@ -254,7 +322,9 @@ export const projectsData = [
         apiUrl: "https://civisvenezuela.com/api",
         images: ["./img/civisvenezuela.png"],
         category: "Localización",
-        subcategories: ["Familiar", "Rescatista", "Voluntario"]
+        subcategories: ["Familiar", "Rescatista", "Voluntario"],
+        order: 23,
+        tags: ["emergencia", "busqueda", "ia", "localizacion"]
     },
     {
         id: 30,
@@ -266,7 +336,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/rescatavenezuela.png"],
         category: "Logística",
-        subcategories: ["Rescatista", "Damnificado", "Médico", "Voluntario"]
+        subcategories: ["Rescatista", "Damnificado", "Médico", "Voluntario"],
+        order: 24,
+        tags: ["rescate", "ayuda-humanitaria", "emergencia", "logistica"]
     },
     {
         id: 31,
@@ -278,7 +350,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/sismoayudave.png"],
         category: "Infraestructura",
-        subcategories: ["Damnificado", "Ingeniero"]
+        subcategories: ["Damnificado", "Ingeniero"],
+        order: 25,
+        tags: ["ingenieria", "evaluacion", "edificios", "infraestructura"]
     },
     {
         id: 32,
@@ -290,7 +364,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/zerena.png"],
         category: "Salud",
-        subcategories: ["Damnificado", "Psicólogo"]
+        subcategories: ["Damnificado", "Psicólogo"],
+        order: 26,
+        tags: ["psicologia", "primeros-auxilios", "oms", "salud"]
     },
     {
         id: 33,
@@ -302,7 +378,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/acopiovenezuela.png"],
         category: "Logística",
-        subcategories: ["Voluntario", "Donante", "Operador"]
+        subcategories: ["Voluntario", "Donante", "Operador"],
+        order: 27,
+        tags: ["acopio", "logistica", "voluntarios"]
     },
     {
         id: 34,
@@ -315,7 +393,9 @@ export const projectsData = [
         apiUrl: "https://t.me/AidTrace_Bot",
         images: ["./img/aidtrace.png"],
         category: "Logística",
-        subcategories: ["Voluntario", "Operador", "Donante"]
+        subcategories: ["Voluntario", "Operador", "Donante"],
+        order: 28,
+        tags: ["blockchain", "qr", "offline", "logistica"]
     },
     {
         id: 35,
@@ -327,7 +407,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/guacamaya.png"],
         category: "Comunicación",
-        subcategories: ["Damnificado", "Rescatista", "Voluntario"]
+        subcategories: ["Damnificado", "Rescatista", "Voluntario"],
+        order: 29,
+        tags: ["mesh", "bluetooth", "comunicacion"]
     },
     {
         id: 36,
@@ -339,7 +421,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/confia.png"],
         category: "Comunicación",
-        subcategories: ["Donante", "Voluntario", "Operador"]
+        subcategories: ["Donante", "Voluntario", "Operador"],
+        order: 30,
+        tags: ["desinformacion", "cripto", "verificacion", "comunicacion"]
     },
     {
         id: 37,
@@ -351,7 +435,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/redh.avapre.png"],
         category: "Logística",
-        subcategories: ["Damnificado", "Voluntario", "Operador"]
+        subcategories: ["Damnificado", "Voluntario", "Operador"],
+        order: 31,
+        tags: ["ayuda-humanitaria", "coordinacion", "emergencia", "logistica"]
     },
     {
         id: 38,
@@ -363,7 +449,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/ayudavnzla.png"],
         category: "Donaciones",
-        subcategories: ["Donante", "Damnificado", "Voluntario"]
+        subcategories: ["Donante", "Damnificado", "Voluntario"],
+        order: 32,
+        tags: ["donaciones", "ayuda-humanitaria", "nacional"]
     },
     {
         id: 39,
@@ -375,7 +463,9 @@ export const projectsData = [
         hasApi: false,
         images: ["./img/redacopiovnzla.png"],
         category: "Donaciones",
-        subcategories: ["Donante", "Voluntario", "Operador"]
+        subcategories: ["Donante", "Voluntario", "Operador"],
+        order: 33,
+        tags: ["acopio", "donaciones", "inventario", "logistica"]
     },
     {
         id: 40,
@@ -388,7 +478,9 @@ export const projectsData = [
         apiUrl: "https://t.me/palmedicoai_bot",
         images: ["./img/palmedico.jpeg"],
         category: "Localización",
-        subcategories: ["Familiar", "Médico", "Operador"]
+        subcategories: ["Familiar", "Médico", "Operador"],
+        order: 34,
+        tags: ["bot", "telegram", "desaparecidos", "localizacion"]
     },
     {
         id: 41,
@@ -401,7 +493,9 @@ export const projectsData = [
         apiUrl: "",
         images: ["./img/voluntariosvenezuela.png"],
         category: "Logística",
-        subcategories: ["Voluntario", "Rescatista", "Médico", "Psicólogo", "Ingeniero", "Veterinario"]
+        subcategories: ["Voluntario", "Rescatista", "Médico", "Psicólogo", "Ingeniero", "Veterinario"],
+        order: 35,
+        tags: ["voluntarios", "registro", "emergencia", "logistica"]
     },
     {
         id: 42,
@@ -414,7 +508,9 @@ export const projectsData = [
         apiUrl: "",
         images: ["./img/venezuelajuntos.png"],
         category: "Localización",
-        subcategories: ["Familiar", "Damnificado", "Voluntario", "Veterinario"]
+        subcategories: ["Familiar", "Damnificado", "Voluntario", "Veterinario"],
+        order: 36,
+        tags: ["busqueda", "reencuentro", "comunitario", "localizacion"]
     },
     {
         id: 43,
@@ -427,19 +523,8 @@ export const projectsData = [
         apiUrl: "",
         images: ["./img/localizapacientes.png"],
         category: "Salud",
-        subcategories: ["Familiar", "Damnificado", "Médico"]
-    },
-    {
-        id: 44,
-        name: "VZLA Ayuda",
-        thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Operation%2C_Back_to_School_provides_humanitarian_aid_to_Iraqi_schoolchildren_DVIDS231068.jpg/800px-Operation%2C_Back_to_School_provides_humanitarian_aid_to_Iraqi_schoolchildren_DVIDS231068.jpg",
-        description: "Portal ciudadano para encontrar o brindar ayuda cerca de ti, sin cuentas y al instante.",
-        fullDescription: "VZLA Ayuda conecta a personas que necesitan apoyo con quienes pueden ofrecer ayuda cercana. Permite pedir o buscar recursos, ofrecer asistencia y consultar líneas de emergencia oficiales desde una iniciativa ciudadana independiente.",
-        url: "https://vzlayuda.com/",
-        hasApi: false,
-        apiUrl: "",
-        images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Operation%2C_Back_to_School_provides_humanitarian_aid_to_Iraqi_schoolchildren_DVIDS231068.jpg/800px-Operation%2C_Back_to_School_provides_humanitarian_aid_to_Iraqi_schoolchildren_DVIDS231068.jpg"],
-        category: "Logística",
-        subcategories: ["Damnificado", "Voluntario", "Donante"]
+        subcategories: ["Familiar", "Damnificado", "Médico"],
+        order: 37,
+        tags: ["hospital", "oficial", "localizacion", "salud"]
     }
 ];
