@@ -527,6 +527,36 @@ export const projectsData = [
         tags: ["busqueda", "reencuentro", "comunitario", "localizacion"]
     },
     {
+        id: 47,
+        name: "Red Esperanza Lime",
+        thumbnail: "./img/red-esperanza.png",
+        description: "Plataforma de ayuda humanitaria y coordinación ciudadana.",
+        fullDescription: "Red Esperanza Lime es una iniciativa de apoyo y solidaridad que busca coordinar esfuerzos de ayuda humanitaria entre comunidades, voluntarios y organizaciones para brindar asistencia oportuna en situaciones de emergencia.",
+        url: "https://red-de-esperanza-lime.vercel.app/",
+        hasApi: false,
+        apiUrl: "",
+        images: ["./img/red-esperanza.png"],
+        category: "Logística",
+        subcategories: ["Damnificado", "Voluntario", "Donante"],
+        order: 41,
+        tags: ["ayuda-humanitaria", "coordinacion", "voluntarios", "logistica"]
+    },
+    {
+        id: 48,
+        name: "Ayuda En Camino",
+        thumbnail: "./img/ayudaencamino.png",
+        description: "Plataforma de apoyo y ayuda comunitaria.",
+        fullDescription: "Ayuda En Camino es una iniciativa solidaria orientada a facilitar la movilización y entrega de recursos y asistencia hacia personas y comunidades que lo necesitan, promoviendo la participación ciudadana y la ayuda directa.",
+        url: "https://ayudaencamino.com/",
+        hasApi: false,
+        apiUrl: "",
+        images: ["./img/ayudaencamino.png"],
+        category: "Logística",
+        subcategories: ["Damnificado", "Voluntario", "Donante"],
+        order: 42,
+        tags: ["ayuda", "comunitaria", "logistica", "solidaridad"]
+    },
+    {
         id: 43,
         name: "Localiza Pacientes",
         thumbnail: "./img/localizapacientes.png",
