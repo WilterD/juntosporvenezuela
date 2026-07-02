@@ -1,0 +1,1112 @@
+{
+  "meta": {
+    "name": "Juntos por Venezuela API",
+    "description": "Directorio público de iniciativas tecnológicas y humanitarias para Venezuela.",
+    "version": "1.0.0",
+    "updatedAt": "2026-07-02T23:20:14.865Z",
+    "totalProjects": 40
+  },
+  "categories": [
+    "Comunicación",
+    "Donaciones",
+    "Infraestructura",
+    "Localización",
+    "Logística",
+    "Salud"
+  ],
+  "subcategories": [
+    "Damnificado",
+    "Donante",
+    "Familiar",
+    "Ingeniero",
+    "Médico",
+    "Operador",
+    "Psicólogo",
+    "Rescatista",
+    "Veterinario",
+    "Voluntario"
+  ],
+  "tags": [
+    "acopio",
+    "agregador",
+    "app",
+    "ayuda",
+    "ayuda-humanitaria",
+    "blockchain",
+    "bluetooth",
+    "bot",
+    "busqueda",
+    "ciudadano",
+    "codigo-abierto",
+    "comunicacion",
+    "comunitaria",
+    "comunitario",
+    "coordinacion",
+    "cripto",
+    "cruz-roja",
+    "desaparecidos",
+    "desinformacion",
+    "difusion",
+    "donaciones",
+    "edificios",
+    "emergencia",
+    "evaluacion",
+    "github",
+    "hackathon",
+    "heatmap",
+    "hospital",
+    "ia",
+    "incidentes",
+    "indice",
+    "infraestructura",
+    "ingenieria",
+    "insumos",
+    "inventario",
+    "localizacion",
+    "logistica",
+    "mapeo",
+    "medico",
+    "mesh",
+    "nacional",
+    "offline",
+    "oficial",
+    "oms",
+    "onu",
+    "personas",
+    "primeros-auxilios",
+    "psicologia",
+    "psicologico",
+    "qr",
+    "recursos",
+    "redes-sociales",
+    "reencuentro",
+    "registro",
+    "repartidores",
+    "reporte",
+    "rescate",
+    "salud",
+    "servicios",
+    "solidaridad",
+    "tecnico",
+    "tecnologia",
+    "telefono",
+    "telegram",
+    "terremoto",
+    "tiempo-real",
+    "ucab",
+    "verificacion",
+    "voluntarios",
+    "whatsapp"
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Build4Venezuela",
+      "thumbnail": "./img/build4vzla.png",
+      "description": "Iniciativa y hackathon cívico para construir soluciones tecnológicas por Venezuela.",
+      "fullDescription": "Build4Venezuela es un espacio que conecta a desarrolladores, diseñadores y gestores de proyectos para crear herramientas digitales que ayuden a mitigar las crisis y emergencias en Venezuela. Fomenta el código abierto y la colaboración masiva para el bien común.",
+      "url": "https://build4venezuela.com/",
+      "hasApi": false,
+      "apiUrl": "",
+      "images": [
+        "./img/build4vzla.png"
+      ],
+      "category": "Infraestructura",
+      "subcategories": [
+        "Voluntario",
+        "Ingeniero"
+      ],
+      "order": 1,
+      "tags": [
+        "hackathon",
+        "tecnologia",
+        "codigo-abierto",
+        "infraestructura"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Red Ayuda Venezuela",
+      "thumbnail": "./img/red_ayuda.png",
+      "description": "Plataforma centralizada para reportar y visualizar necesidades y centros de acopio.",
+      "fullDescription": "Red Ayuda Venezuela permite a los ciudadanos publicar necesidades urgentes (insumos médicos, alimentos, rescate) y a las organizaciones coordinar la respuesta. Su sistema de mapeo ayuda a distribuir eficientemente los recursos donados a las zonas más afectadas.",
+      "url": "https://redayudavenezuela.com/ayuda/necesidades",
+      "hasApi": false,
+      "images": [
+        "./img/red_ayuda.png"
+      ],
+      "category": "Logística",
+      "subcategories": [
+        "Damnificado",
+        "Voluntario",
+        "Donante"
+      ],
+      "order": 2,
+      "tags": [
+        "ayuda",
+        "mapeo",
+        "donaciones",
+        "logistica"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Venezuela Reporta",
+      "thumbnail": "./img/vzla_reporta.png",
+      "description": "Sistema de reporte ciudadano sobre incidentes, estado de vías y servicios básicos.",
+      "fullDescription": "Venezuela Reporta empodera a los ciudadanos para que informen en tiempo real sobre derrumbes, vías bloqueadas, cortes de electricidad o falta de agua. Esta información vital ayuda a los equipos de rescate a trazar rutas seguras y evaluar daños.",
+      "url": "https://venezuelareporta.org",
+      "hasApi": true,
+      "apiUrl": "https://venezuelareporta.org/api-abierta",
+      "images": [
+        "./img/vzla_reporta.png"
+      ],
+      "category": "Comunicación",
+      "subcategories": [
+        "Damnificado",
+        "Voluntario",
+        "Operador"
+      ],
+      "order": 3,
+      "tags": [
+        "reporte",
+        "ciudadano",
+        "servicios",
+        "comunicacion"
+      ]
+    },
+    {
+      "id": 44,
+      "name": "VZLA Ayuda",
+      "thumbnail": "./img/vzlayuda.png",
+      "description": "Encuentra o brinda ayuda cerca de ti. Sin cuentas, al instante.",
+      "fullDescription": "VZLA Ayuda es una iniciativa ciudadana que permite encontrar o brindar ayuda cerca de ti sin necesidad de cuentas y de forma instantánea. Conecta a quienes necesitan ayuda con quienes pueden ofrecerla.",
+      "url": "https://vzlayuda.com",
+      "hasApi": false,
+      "images": [
+        "./img/vzlayuda.png"
+      ],
+      "category": "Logística",
+      "subcategories": [
+        "Damnificado",
+        "Voluntario",
+        "Donante"
+      ],
+      "order": 4,
+      "tags": [
+        "ayuda",
+        "busqueda",
+        "ciudadano",
+        "logistica"
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Red por Venezuela",
+      "thumbnail": "./img/redporvenezuela.png",
+      "description": "Toda la ayuda para Venezuela, en un solo lugar. Índice de publicaciones de redes sociales clasificadas.",
+      "fullDescription": "Red por Venezuela reúne y clasifica publicaciones de Instagram, Facebook y X sobre la emergencia sin modificarlas. Cada dato muestra su resumen, extracto original y link a la fuente. Es un índice informativo, no una fuente original.",
+      "url": "https://redporvenezuela.com",
+      "hasApi": false,
+      "images": [
+        "./img/redporvenezuela.png"
+      ],
+      "category": "Comunicación",
+      "subcategories": [
+        "Damnificado",
+        "Voluntario",
+        "Donante"
+      ],
+      "order": 5,
+      "tags": [
+        "indice",
+        "redes-sociales",
+        "emergencia",
+        "comunicacion"
+      ]
+    },
+    {
+      "id": 46,
+      "name": "AyudaVE",
+      "thumbnail": "./img/ayudahumanitariavenezuela.png",
+      "description": "Iniciativa de ayuda humanitaria para Venezuela. Difunde información crítica para salvar vidas.",
+      "fullDescription": "AyudaVE es una iniciativa de ayuda humanitaria enfocada en difundir información crítica y recursos de emergencia para Venezuela. Su lema principal es 'Difundir es ayudar', buscando salvar a más personas mediante la difusión de información vital en momentos de crisis.",
+      "url": "https://www.ayudahumanitariavenezuela.com/",
+      "hasApi": false,
+      "images": [
+        "./img/ayudahumanitariavenezuela.png"
+      ],
+      "category": "Comunicación",
+      "subcategories": [
+        "Damnificado",
+        "Voluntario",
+        "Donante"
+      ],
+      "order": 40,
+      "tags": [
+        "ayuda-humanitaria",
+        "difusion",
+        "emergencia",
+        "comunicacion"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Reencuentra VE",
+      "thumbnail": "./img/reencuentra.png",
+      "description": "Aplicación dedicada a la búsqueda y localización de personas desaparecidas.",
+      "fullDescription": "Tras los recientes eventos sísmicos, Reencuentra VE ofrece una base de datos segura y de fácil acceso donde familiares pueden publicar fotos y datos de personas extraviadas, y los refugios o rescatistas pueden reportar a las personas que han sido localizadas.",
+      "url": "https://reencuentra-ve.vercel.app",
+      "hasApi": false,
+      "images": [
+        "./img/reencuentra.png"
+      ],
+      "category": "Localización",
+      "subcategories": [
+        "Familiar",
+        "Rescatista",
+        "Damnificado"
+      ],
+      "order": 6,
+      "tags": [
+        "busqueda",
+        "personas",
+        "desaparecidos",
+        "localizacion"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Encuentrame VE",
+      "thumbnail": "./img/encuentrameve.png",
+      "description": "Plataforma centralizada para buscar y reportar personas desaparecidas.",
+      "fullDescription": "Encuentrame VE es una iniciativa solidaria diseñada para consolidar la información de personas extraviadas o no localizadas. Permite a familiares, voluntarios y organizaciones registrar reportes detallados, agilizando los esfuerzos de búsqueda y reencuentro familiar.",
+      "url": "https://encuentrame-ve.com/",
+      "hasApi": false,
+      "images": [
+        "./img/encuentrameve.png"
+      ],
+      "category": "Localización",
+      "subcategories": [
+        "Familiar",
+        "Voluntario",
+        "Damnificado"
+      ],
+      "order": 38,
+      "tags": [
+        "busqueda",
+        "personas",
+        "desaparecidos",
+        "localizacion"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Bot Localizados Vzla",
+      "thumbnail": "./img/bot_telegram.jpeg",
+      "description": "Bot automatizado por WhatsApp y Telegram para reporte de personas con endpoints públicos.",
+      "fullDescription": "Asistente virtual de acceso rápido desde WhatsApp (wa.me/584225252437) y Telegram (t.me/localizadosvzla2026_bot). Facilita el reporte y búsqueda de personas desaparecidas o localizadas. Cuenta con endpoints públicos, lo que permite a otras iniciativas y plataformas integrarse de forma eficiente.",
+      "url": "https://t.me/localizadosvzla2026_bot",
+      "hasApi": true,
+      "apiUrl": "",
+      "images": [
+        "./img/bot_telegram.jpeg"
+      ],
+      "category": "Localización",
+      "subcategories": [
+        "Familiar",
+        "Rescatista",
+        "Operador"
+      ],
+      "order": 39,
+      "tags": [
+        "bot",
+        "telegram",
+        "whatsapp",
+        "desaparecidos",
+        "localizacion"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Técnicos Por Venezuela",
+      "thumbnail": "./img/tecnicos.png",
+      "description": "Plataforma de registro y atención de casos que requieren asistencia técnica.",
+      "fullDescription": "Técnicos Por Venezuela es un espacio dedicado a canalizar reportes de averías o necesidades de infraestructura técnica crítica. Voluntarios especialistas pueden visualizar el mapa de casos, priorizar incidencias y coordinar esfuerzos para el restablecimiento de servicios.",
+      "url": "https://tecnicosporvenezuela.com/casos",
+      "hasApi": false,
+      "images": [
+        "./img/tecnicos.png"
+      ],
+      "category": "Infraestructura",
+      "subcategories": [
+        "Damnificado",
+        "Voluntario",
+        "Ingeniero",
+        "Operador"
+      ],
+      "order": 39,
+      "tags": [
+        "tecnico",
+        "infraestructura",
+        "voluntarios"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Hazlo Hoy",
+      "thumbnail": "./img/hazlohoy.png",
+      "description": "Iniciativa de apoyo, acopio y asistencia solidaria para damnificados.",
+      "fullDescription": "Hazlo Hoy centraliza los esfuerzos de donación y asistencia directa a las víctimas de los sismos recientes. Facilita la logística de entrega y fomenta la participación ciudadana para llevar recursos de primera necesidad a las comunidades más afectadas.",
+      "url": "https://terremoto.hazlohoy.org/",
+      "hasApi": false,
+      "images": [
+        "./img/hazlohoy.png"
+      ],
+      "category": "Donaciones",
+      "subcategories": [
+        "Damnificado",
+        "Voluntario",
+        "Donante"
+      ],
+      "order": 40,
+      "tags": [
+        "donaciones",
+        "acopio",
+        "solidaridad",
+        "logistica"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Desaparecidos Terremoto Venezuela",
+      "thumbnail": "./img/desaparecidosterremotovenezuela.png",
+      "description": "56.000+ reportados | 37.000+ sin contacto | 19.000+ localizados.",
+      "fullDescription": "Buscar por nombre/cédula, reportar, marcar como encontrado. Sin necesidad de registro. Fuente verificada activa por CNN / El Caribe.",
+      "url": "https://desaparecidosterremotovenezuela.com",
+      "hasApi": false,
+      "images": [
+        "./img/desaparecidosterremotovenezuela.png"
+      ],
+      "category": "Localización",
+      "subcategories": [
+        "Familiar",
+        "Damnificado",
+        "Rescatista"
+      ],
+      "order": 38,
+      "tags": [
+        "busqueda",
+        "desaparecidos",
+        "terremoto",
+        "localizacion"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Venezuela Te Busca",
+      "thumbnail": "./img/venezuelatebusca.png",
+      "description": "26.000+ registros. Sección especial Terremoto 2026.",
+      "fullDescription": "Permite buscar, registrar y marcar como localizado. Esfuerzo de búsqueda activa respaldado por El Caribe.",
+      "url": "https://venezuelatebusca.com",
+      "hasApi": false,
+      "images": [
+        "./img/venezuelatebusca.png"
+      ],
+      "category": "Localización",
+      "subcategories": [
+        "Familiar",
+        "Damnificado",
+        "Voluntario"
+      ],
+      "order": 39,
+      "tags": [
+        "busqueda",
+        "desaparecidos",
+        "terremoto",
+        "localizacion"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Encuentrame VZLA",
+      "thumbnail": "./img/encuentramevzla.png",
+      "description": "Busca personas encontradas y llevadas a hospitales.",
+      "fullDescription": "Plataforma enfocada específicamente en registrar e identificar personas que han sido trasladadas a centros hospitalarios tras la emergencia.",
+      "url": "https://encuentramevzla.com",
+      "hasApi": false,
+      "images": [
+        "./img/encuentramevzla.png"
+      ],
+      "category": "Salud",
+      "subcategories": [
+        "Familiar",
+        "Damnificado",
+        "Médico"
+      ],
+      "order": 40,
+      "tags": [
+        "hospital",
+        "busqueda",
+        "desaparecidos",
+        "salud"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "venezuela-earthquake-map",
+      "thumbnail": "./img/venezuela-earthquake-map.png",
+      "description": "Heatmap en tiempo real. Proyecto de código abierto (GitHub).",
+      "fullDescription": "Heatmap en tiempo real. Agrega reportes de YouTube, X/Twitter e Instagram cada 10 min. Centros de acopio verificados. Directorio 30+ hospitales. Licencia MIT.",
+      "url": "https://venezuela-earthquake-map.vercel.app/",
+      "hasApi": true,
+      "apiUrl": "https://github.com/nochinxx/venezuela-earthquake-map",
+      "images": [
+        "./img/venezuela-earthquake-map.png"
+      ],
+      "category": "Localización",
+      "subcategories": [
+        "Rescatista",
+        "Voluntario",
+        "Operador"
+      ],
+      "order": 38,
+      "tags": [
+        "heatmap",
+        "codigo-abierto",
+        "github",
+        "localizacion"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Yummy SOS",
+      "thumbnail": "./img/yummysos.png",
+      "description": "Reporte de daños estructurales con foto y GPS.",
+      "fullDescription": "Yummy moviliza repartidores para llevar agua, alimentos y medicamentos sin costo a refugios. Permite reporte directo desde la aplicación.",
+      "url": "https://sos.yummyrides.com",
+      "hasApi": false,
+      "images": [
+        "./img/yummysos.png"
+      ],
+      "category": "Logística",
+      "subcategories": [
+        "Damnificado",
+        "Voluntario",
+        "Operador"
+      ],
+      "order": 39,
+      "tags": [
+        "repartidores",
+        "ayuda",
+        "app",
+        "logistica"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Ayuda Terremoto Venezuela",
+      "thumbnail": "./img/recursos-venezuela.png",
+      "description": "Agregador verificado de recursos y plataformas.",
+      "fullDescription": "Agregador verificado: plataformas de búsqueda, instrucciones de supervivencia, canales de donación. Links a GlobalGiving, UNICEF y Cruz Roja.",
+      "url": "https://recursos-venezuela.netlify.app",
+      "hasApi": false,
+      "images": [
+        "./img/recursos-venezuela.png"
+      ],
+      "category": "Comunicación",
+      "subcategories": [
+        "Familiar",
+        "Damnificado",
+        "Donante"
+      ],
+      "order": 40,
+      "tags": [
+        "agregador",
+        "recursos",
+        "donaciones",
+        "comunicacion"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Cruz Roja Española",
+      "thumbnail": "./img/cruz_roja.png",
+      "description": "Canal oficial de donación monetaria (Bizum, SMS).",
+      "fullDescription": "Canal oficial. Bizum al 33512 o SMS VENEZUELA al 38092 (6€ íntegros). Coordinación directa con la Cruz Roja Venezolana.",
+      "url": "https://www2.cruzroja.es/-/ayuda-terremoto-venezuela-2026",
+      "hasApi": false,
+      "images": [
+        "./img/cruz_roja.png"
+      ],
+      "category": "Donaciones",
+      "subcategories": [
+        "Donante",
+        "Damnificado"
+      ],
+      "order": 38,
+      "tags": [
+        "donaciones",
+        "cruz-roja",
+        "oficial"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "PsicoLínea Venezuela (UCAB)",
+      "thumbnail": "./img/logo-ucab.png",
+      "description": "Atención psicológica gratuita por vía telefónica.",
+      "fullDescription": "Impulsado por la Universidad Católica Andrés Bello (UCAB). Tel: 0414-121 78 82 / 0424-172 39 81. Solo disponible dentro de Venezuela.",
+      "url": "tel:04141217882",
+      "hasApi": false,
+      "images": [
+        "./img/logo-ucab.png"
+      ],
+      "category": "Salud",
+      "subcategories": [
+        "Damnificado",
+        "Psicólogo"
+      ],
+      "order": 39,
+      "tags": [
+        "psicologia",
+        "telefono",
+        "ucab",
+        "salud"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Grupo Venemergencia",
+      "thumbnail": "./img/ven_emergencia.png",
+      "description": "Plataforma médica venezolana operativa. Afectados físicos y psicológicos.",
+      "fullDescription": "Atención especializada para personas afectadas física y emocionalmente tras la emergencia, centralizando soporte a través de su plataforma.",
+      "url": "https://www.instagram.com/venemergencia",
+      "hasApi": false,
+      "images": [
+        "./img/ven_emergencia.png"
+      ],
+      "category": "Salud",
+      "subcategories": [
+        "Damnificado",
+        "Médico",
+        "Psicólogo"
+      ],
+      "order": 40,
+      "tags": [
+        "medico",
+        "psicologico",
+        "emergencia",
+        "salud"
+      ]
+    },
+    {
+      "id": 26,
+      "name": "TerremotoVenezuela.com",
+      "thumbnail": "./img/terremotovenezuela.png",
+      "description": "Versión web del Heatmap de incidentes en tiempo real.",
+      "fullDescription": "Heatmap en tiempo real. Agrega reportes de YouTube, X/Twitter e Instagram cada 10 min. Centros de acopio verificados. Directorio 30+ hospitales.",
+      "url": "https://www.terremotovenezuela.com",
+      "hasApi": false,
+      "images": [
+        "./img/terremotovenezuela.png"
+      ],
+      "category": "Localización",
+      "subcategories": [
+        "Rescatista",
+        "Voluntario",
+        "Operador"
+      ],
+      "order": 38,
+      "tags": [
+        "heatmap",
+        "incidentes",
+        "tiempo-real",
+        "localizacion"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "ResponseGrid",
+      "thumbnail": "./img/responsegrid.png",
+      "description": "Gestión y trazabilidad de insumos y necesidades.",
+      "fullDescription": "Gestión y trazabilidad en tiempo real de insumos médicos, necesidades logísticas y puntos de donación o recepción para OCHA/ONU.",
+      "url": "https://responsegrid.app/",
+      "hasApi": false,
+      "images": [
+        "./img/responsegrid.png"
+      ],
+      "category": "Logística",
+      "subcategories": [
+        "Voluntario",
+        "Operador",
+        "Donante",
+        "Médico"
+      ],
+      "order": 39,
+      "tags": [
+        "insumos",
+        "logistica",
+        "onu"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Red Venezuela Activa",
+      "thumbnail": "./img/ayudavenezuela2026.png",
+      "description": "Plataforma ciudadana de coordinación de ayuda humanitaria.",
+      "fullDescription": "Conecta a quién necesita ayuda con quién puede darla. Registro de voluntarios, reporte de casos urgentes, albergues y sus necesidades, mapa en vivo y movilización por WhatsApp.",
+      "url": "https://ayudavenezuela2026.com",
+      "hasApi": false,
+      "images": [
+        "./img/ayudavenezuela2026.png"
+      ],
+      "category": "Logística",
+      "subcategories": [
+        "Damnificado",
+        "Voluntario",
+        "Donante"
+      ],
+      "order": 40,
+      "tags": [
+        "ayuda-humanitaria",
+        "voluntarios",
+        "mapeo",
+        "logistica"
+      ]
+    },
+    {
+      "id": 29,
+      "name": "CIVIS Venezuela",
+      "thumbnail": "./img/civisvenezuela.png",
+      "description": "Sistema de registro y seguimiento de niños rescatados y búsqueda.",
+      "fullDescription": "Plataforma de apoyo ciudadano para emergencia: búsqueda de personas desaparecidas, reportes de daños, mapa de riesgos, puntos de abastecimiento, réplicas y agentes de IA por WhatsApp. Sistema offline disponible.",
+      "url": "https://civisvenezuela.com",
+      "hasApi": true,
+      "apiUrl": "https://civisvenezuela.com/api",
+      "images": [
+        "./img/civisvenezuela.png"
+      ],
+      "category": "Localización",
+      "subcategories": [
+        "Familiar",
+        "Rescatista",
+        "Voluntario"
+      ],
+      "order": 38,
+      "tags": [
+        "emergencia",
+        "busqueda",
+        "ia",
+        "localizacion"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Rescata Venezuela",
+      "thumbnail": "./img/rescatavenezuela.png",
+      "description": "Iniciativa de coordinación para asistencia humanitaria y rescate.",
+      "fullDescription": "Rescata Venezuela es una plataforma integral destinada a facilitar y agilizar la respuesta ante emergencias, centralizando esfuerzos de rescate, atención médica primaria y recolección de insumos vitales para las comunidades más impactadas por los sismos.",
+      "url": "https://www.rescatavenezuela.com/",
+      "hasApi": false,
+      "images": [
+        "./img/rescatavenezuela.png"
+      ],
+      "category": "Logística",
+      "subcategories": [
+        "Rescatista",
+        "Damnificado",
+        "Médico",
+        "Voluntario"
+      ],
+      "order": 39,
+      "tags": [
+        "rescate",
+        "ayuda-humanitaria",
+        "emergencia",
+        "logistica"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "SismoAyudaVE",
+      "thumbnail": "./img/sismoayudave.png",
+      "description": "Evaluación de daños en edificios por ingenieros civiles voluntarios.",
+      "fullDescription": "¿Tu edificio resultó dañado por el sismo? Ingenieros civiles voluntarios revisarán las fotos que envíes y te entregarán un informe de evaluación por correo electrónico en el menor tiempo posible.",
+      "url": "https://www.sismoayudave.com",
+      "hasApi": false,
+      "images": [
+        "./img/sismoayudave.png"
+      ],
+      "category": "Infraestructura",
+      "subcategories": [
+        "Damnificado",
+        "Ingeniero"
+      ],
+      "order": 40,
+      "tags": [
+        "ingenieria",
+        "evaluacion",
+        "edificios",
+        "infraestructura"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Zerena.help",
+      "thumbnail": "./img/zerena.png",
+      "description": "Espacio de apoyo basado en Primeros Auxilios Psicológicos (OMS/OPS).",
+      "fullDescription": "Zerena es un espacio de apoyo de primera instancia basado en los Primeros Auxilios Psicológicos (OMS/OPS). No es terapia, no diagnostica y no reemplaza la atención de un profesional ni los servicios de emergencia.",
+      "url": "https://zerena.help/",
+      "hasApi": false,
+      "images": [
+        "./img/zerena.png"
+      ],
+      "category": "Salud",
+      "subcategories": [
+        "Damnificado",
+        "Psicólogo"
+      ],
+      "order": 38,
+      "tags": [
+        "psicologia",
+        "primeros-auxilios",
+        "oms",
+        "salud"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Acopio Venezuela",
+      "thumbnail": "./img/acopiovenezuela.png",
+      "description": "Coordinación logística y de comunicación para puntos de acopio.",
+      "fullDescription": "Iniciativa que unifica información logística de entrega de suministros. Conecta a voluntarios en puntos de acopio y refugios improvisados, mejorando el traslado y redirigiendo más eficazmente los recursos.",
+      "url": "https://acopiovenezuela.netlify.app/",
+      "hasApi": false,
+      "images": [
+        "./img/acopiovenezuela.png"
+      ],
+      "category": "Logística",
+      "subcategories": [
+        "Voluntario",
+        "Donante",
+        "Operador"
+      ],
+      "order": 39,
+      "tags": [
+        "acopio",
+        "logistica",
+        "voluntarios"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "AidTrace | RastroAyuda",
+      "thumbnail": "./img/aidtrace.png",
+      "description": "Solución offline-first para rastrear suministros humanitarios mediante QR y blockchain.",
+      "fullDescription": "En operaciones humanitarias con baja conectividad, AidTrace permite registrar entregas de ayuda dejando evidencia verificable anclada en Celo, sin requerir conocimientos técnicos o conexión a internet al momento de la entrega. Soporte vía web y Telegram.",
+      "url": "https://aidtrace-rastroayuda.vercel.app/",
+      "hasApi": true,
+      "apiUrl": "https://t.me/AidTrace_Bot",
+      "images": [
+        "./img/aidtrace.png"
+      ],
+      "category": "Logística",
+      "subcategories": [
+        "Voluntario",
+        "Operador",
+        "Donante"
+      ],
+      "order": 40,
+      "tags": [
+        "blockchain",
+        "qr",
+        "offline",
+        "logistica"
+      ]
+    },
+    {
+      "id": 35,
+      "name": "GuacaMalla",
+      "thumbnail": "./img/guacamaya.png",
+      "description": "Red de emergencia en malla (Mesh) Bluetooth LE y WiFi Direct.",
+      "fullDescription": "Sin señal, sin internet, la red sigue viva. GuacaMalla retransmite tu auxilio de teléfono en teléfono en zonas sin torres celulares o con pobre conexión. La autenticidad viaja firmada en cada señal, logrando comunicar y localizar a las personas.",
+      "url": "https://www.guacamalla.org/",
+      "hasApi": false,
+      "images": [
+        "./img/guacamaya.png"
+      ],
+      "category": "Comunicación",
+      "subcategories": [
+        "Damnificado",
+        "Rescatista",
+        "Voluntario"
+      ],
+      "order": 38,
+      "tags": [
+        "mesh",
+        "bluetooth",
+        "comunicacion"
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Confía",
+      "thumbnail": "./img/confia.png",
+      "description": "Verificador contra la desinformación y estafas cripto durante la emergencia.",
+      "fullDescription": "Confía contrasta rumores falsos con fuentes oficiales (FUNVISIS, Protección Civil, Cruz Roja) y hace análisis on-chain en vivo (antigüedad, historial y saldo) de las 'wallets de donación' marcando su riesgo 🔴/🟡/🟢. Funciona desde el navegador, en español y sin registro.",
+      "url": "https://confia-rose.vercel.app",
+      "hasApi": false,
+      "images": [
+        "./img/confia.png"
+      ],
+      "category": "Comunicación",
+      "subcategories": [
+        "Donante",
+        "Voluntario",
+        "Operador"
+      ],
+      "order": 39,
+      "tags": [
+        "desinformacion",
+        "cripto",
+        "verificacion",
+        "comunicacion"
+      ]
+    },
+    {
+      "id": 37,
+      "name": "REDH",
+      "thumbnail": "./img/redh.avapre.png",
+      "description": "Plataforma de la Red de Emergencia y Ayuda Humanitaria.",
+      "fullDescription": "Plataforma centralizada para la coordinación de recursos, asistencia y apoyo durante la situación de emergencia, enlazando necesidades con puntos de asistencia temprana.",
+      "url": "https://redh.avapre.com/",
+      "hasApi": false,
+      "images": [
+        "./img/redh.avapre.png"
+      ],
+      "category": "Logística",
+      "subcategories": [
+        "Damnificado",
+        "Voluntario",
+        "Operador"
+      ],
+      "order": 40,
+      "tags": [
+        "ayuda-humanitaria",
+        "coordinacion",
+        "emergencia",
+        "logistica"
+      ]
+    },
+    {
+      "id": 38,
+      "name": "AyudaVnzla",
+      "thumbnail": "./img/ayudavnzla.png",
+      "description": "Plataforma solidaria para centralizar donaciones y recursos.",
+      "fullDescription": "Iniciativa orientada a maximizar el impacto de las donaciones y recursos enviados a los afectados por la emergencia, conectando iniciativas y esfuerzos humanitarios a nivel nacional.",
+      "url": "https://www.ayudavnzla.org/",
+      "hasApi": false,
+      "images": [
+        "./img/ayudavnzla.png"
+      ],
+      "category": "Donaciones",
+      "subcategories": [
+        "Donante",
+        "Damnificado",
+        "Voluntario"
+      ],
+      "order": 38,
+      "tags": [
+        "donaciones",
+        "ayuda-humanitaria",
+        "nacional"
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Red Acopio Vnzla",
+      "thumbnail": "./img/redacopiovnzla.png",
+      "description": "Registro de donaciones y divulgación de inventarios en tiempo real.",
+      "fullDescription": "Plataforma para registrar donaciones y divulgación de inventarios en tiempo real de todos los centros de acopio registrados para tener mayor visibilidad. Si eres jefe de un centro de acopio puedes registrar el centro y luego será validado por su equipo para que todos puedan visualizarlo.",
+      "url": "https://www.redacopiovnzla.com/",
+      "hasApi": false,
+      "images": [
+        "./img/redacopiovnzla.png"
+      ],
+      "category": "Donaciones",
+      "subcategories": [
+        "Donante",
+        "Voluntario",
+        "Operador"
+      ],
+      "order": 39,
+      "tags": [
+        "acopio",
+        "donaciones",
+        "inventario",
+        "logistica"
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Palmedico AI",
+      "thumbnail": "./img/palmedico.jpeg",
+      "description": "Bot de Telegram para encontrar personas desaparecidas.",
+      "fullDescription": "Asistente virtual de acceso rápido desde Telegram (@palmedicoai_bot). Facilita el reporte y búsqueda de personas desaparecidas tras las emergencias.",
+      "url": "https://t.me/palmedicoai_bot",
+      "hasApi": true,
+      "apiUrl": "https://t.me/palmedicoai_bot",
+      "images": [
+        "./img/palmedico.jpeg"
+      ],
+      "category": "Localización",
+      "subcategories": [
+        "Familiar",
+        "Médico",
+        "Operador"
+      ],
+      "order": 40,
+      "tags": [
+        "bot",
+        "telegram",
+        "desaparecidos",
+        "localizacion"
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Voluntarios Venezuela",
+      "thumbnail": "./img/voluntariosvenezuela.png",
+      "description": "Registro público de voluntarios para coordinar ayuda tras el terremoto.",
+      "fullDescription": "Iniciativa ciudadana, voluntaria y sin fines de lucro para coordinar la ayuda tras el terremoto. Al registrarte, tu nombre, número de teléfono y disponibilidad serán visibles públicamente para que los equipos de respuesta puedan contactarte. También permite visualizar el listado de voluntarios activos y las emergencias reportadas.",
+      "url": "https://voluntariosvenezuela.org/registro",
+      "hasApi": false,
+      "apiUrl": "",
+      "images": [
+        "./img/voluntariosvenezuela.png"
+      ],
+      "category": "Logística",
+      "subcategories": [
+        "Voluntario",
+        "Rescatista",
+        "Médico",
+        "Psicólogo",
+        "Ingeniero",
+        "Veterinario"
+      ],
+      "order": 38,
+      "tags": [
+        "voluntarios",
+        "registro",
+        "emergencia",
+        "logistica"
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Venezuela Juntos",
+      "thumbnail": "./img/venezuelajuntos.png",
+      "description": "Herramienta ciudadana para buscar personas, avisar reencuentros y coordinar ayuda.",
+      "fullDescription": "Venezuela Juntos reúne reportes cargados por familiares, amistades, vecinos y voluntarios para facilitar búsqueda, verificación y apoyo comunitario. Permite reportar personas desaparecidas o encontradas, indicar que estás a salvo, reportar mascotas perdidas, solicitar u ofrecer refugio y ver un mapa de reportes en vivo.",
+      "url": "https://venezuelajuntos.online/",
+      "hasApi": false,
+      "apiUrl": "",
+      "images": [
+        "./img/venezuelajuntos.png"
+      ],
+      "category": "Localización",
+      "subcategories": [
+        "Familiar",
+        "Damnificado",
+        "Voluntario",
+        "Veterinario"
+      ],
+      "order": 39,
+      "tags": [
+        "busqueda",
+        "reencuentro",
+        "comunitario",
+        "localizacion"
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Red Esperanza Lime",
+      "thumbnail": "./img/red-esperanza.png",
+      "description": "Plataforma de ayuda humanitaria y coordinación ciudadana.",
+      "fullDescription": "Red Esperanza Lime es una iniciativa de apoyo y solidaridad que busca coordinar esfuerzos de ayuda humanitaria entre comunidades, voluntarios y organizaciones para brindar asistencia oportuna en situaciones de emergencia.",
+      "url": "https://red-de-esperanza-lime.vercel.app/",
+      "hasApi": false,
+      "apiUrl": "",
+      "images": [
+        "./img/red-esperanza.png"
+      ],
+      "category": "Logística",
+      "subcategories": [
+        "Damnificado",
+        "Voluntario",
+        "Donante"
+      ],
+      "order": 41,
+      "tags": [
+        "ayuda-humanitaria",
+        "coordinacion",
+        "voluntarios",
+        "logistica"
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Ayuda En Camino",
+      "thumbnail": "./img/ayudaencamino.png",
+      "description": "Plataforma de apoyo y ayuda comunitaria.",
+      "fullDescription": "Ayuda En Camino es una iniciativa solidaria orientada a facilitar la movilización y entrega de recursos y asistencia hacia personas y comunidades que lo necesitan, promoviendo la participación ciudadana y la ayuda directa.",
+      "url": "https://ayudaencamino.com/",
+      "hasApi": false,
+      "apiUrl": "",
+      "images": [
+        "./img/ayudaencamino.png"
+      ],
+      "category": "Logística",
+      "subcategories": [
+        "Damnificado",
+        "Voluntario",
+        "Donante"
+      ],
+      "order": 42,
+      "tags": [
+        "ayuda",
+        "comunitaria",
+        "logistica",
+        "solidaridad"
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Localiza Pacientes",
+      "thumbnail": "./img/localizapacientes.png",
+      "description": "Sistema oficial para consultar la ubicación de personas atendidas tras el terremoto.",
+      "fullDescription": "Centro Nacional de Localización de Personas. Sistema oficial con información actualizada en tiempo real por los hospitales del país. Permite consultar el estado y ubicación de pacientes ingresados, con cobertura nacional e integración de reportes hospitalarios. Incluye directorio de teléfonos oficiales: Emergencias 171, MPPS 0800-SALUD y Protección Civil.",
+      "url": "https://localizapacientes.com",
+      "hasApi": false,
+      "apiUrl": "",
+      "images": [
+        "./img/localizapacientes.png"
+      ],
+      "category": "Salud",
+      "subcategories": [
+        "Familiar",
+        "Damnificado",
+        "Médico"
+      ],
+      "order": 40,
+      "tags": [
+        "hospital",
+        "oficial",
+        "localizacion",
+        "salud"
+      ]
+    }
+  ]
+}

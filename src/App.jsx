@@ -1,19 +1,10 @@
-import { useState, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, ExternalLink, X, MapPin, Info, SlidersHorizontal } from 'lucide-react';
+import { BookOpen, Code, Database, ExternalLink, Info, MapPin, Search, SlidersHorizontal, X } from 'lucide-react';
 import { projectsData } from './data';
 import './index.css';
 
-const categories = [
-  'Localización',
-  'Logística',
-  'Salud',
-  'Comunicación',
-  'Infraestructura',
-  'Donaciones',
-];
-
-const subcategories = [
+const staticSubcategories = [
   'Familiar',
   'Rescatista',
   'Damnificado',
@@ -26,12 +17,163 @@ const subcategories = [
   'Donante',
 ];
 
+
+const apiFields = [
+  ['id', 'number', 'Identificador único del proyecto.'],
+  ['name', 'string', 'Nombre visible de la iniciativa.'],
+  ['thumbnail', 'string', 'Ruta pública de la imagen principal para renderizar tarjetas.'],
+  ['description', 'string', 'Resumen corto para tarjetas y listados.'],
+  ['fullDescription', 'string', 'Descripción extendida para páginas de detalle.'],
+  ['url', 'string', 'Enlace oficial del proyecto.'],
+  ['hasApi', 'boolean', 'Indica si la iniciativa declara API o integración pública.'],
+  ['apiUrl', 'string', 'URL de documentación, bot, repositorio o endpoint API cuando existe.'],
+  ['images', 'string[]', 'Galería pública de imágenes del proyecto.'],
+  ['category', 'string', 'Categoría principal.'],
+  ['subcategories', 'string[]', 'Tipos de personas beneficiadas o roles relacionados.'],
+  ['order', 'number', 'Prioridad de ordenamiento sugerida.'],
+  ['tags', 'string[]', 'Etiquetas libres para búsqueda y filtros.'],
+];
+
+function ApiDocumentation({ categories, subcategories, tags }) {
+  const apiBaseUrl = `${window.location.origin}/api/projects.json`;
+  const exampleProject = projectsData.find((project) => project.hasApi) || projectsData[0];
+
+  return (
+    <div className="app-shell min-h-screen bg-background relative overflow-hidden">
+      <div className="safari-blur absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px] pointer-events-none" />
+      <div className="safari-blur absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px] pointer-events-none" />
+
+      <nav className="relative z-20 w-full px-6 pt-6 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between max-w-7xl mx-auto">
+        <a href="#/" className="inline-flex items-center justify-center px-5 py-2.5 bg-white/80 text-primary font-semibold rounded-full border border-primary/20 shadow-sm hover:bg-primary hover:text-primary-foreground transition-colors">
+          ← Volver al directorio
+        </a>
+        <a href={apiBaseUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-primary text-primary-foreground font-medium rounded-full shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+          <Database className="w-4 h-4" /> Abrir JSON
+        </a>
+      </nav>
+
+      <main className="relative z-10 max-w-6xl mx-auto px-6 py-12">
+        <section className="text-center max-w-3xl mx-auto mb-10">
+          <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full bg-primary/10 text-primary font-semibold text-sm tracking-wide">
+            <Code className="w-4 h-4" /> API pública
+          </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground mb-5">
+            Documentación API de Juntos por Venezuela
+          </h1>
+          <p className="text-lg text-foreground/70 leading-relaxed">
+            Consume el catálogo completo para mostrar tarjetas, detalles, categorías, subcategorías, etiquetas y metadatos de las iniciativas en otras aplicaciones, mapas, bots o agregadores humanitarios.
+          </p>
+        </section>
+
+        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <section className="glass-card rounded-3xl p-6 border border-border/50">
+            <h2 className="text-2xl font-bold text-foreground mb-4">Endpoint disponible</h2>
+            <div className="rounded-2xl bg-foreground text-white p-4 overflow-x-auto text-sm font-mono mb-5">
+              GET {apiBaseUrl}
+            </div>
+            <p className="text-foreground/70 leading-relaxed mb-4">
+              La respuesta es JSON estático y no requiere autenticación. Puedes descargarla desde navegador, frontend, backend, workflows o herramientas de automatización.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-3">
+              <div className="rounded-2xl bg-primary/5 p-4 border border-primary/10">
+                <p className="text-3xl font-extrabold text-primary">{projectsData.length}</p>
+                <p className="text-sm text-foreground/60 font-semibold">proyectos</p>
+              </div>
+              <div className="rounded-2xl bg-primary/5 p-4 border border-primary/10">
+                <p className="text-3xl font-extrabold text-primary">{categories.length}</p>
+                <p className="text-sm text-foreground/60 font-semibold">categorías</p>
+              </div>
+              <div className="rounded-2xl bg-primary/5 p-4 border border-primary/10">
+                <p className="text-3xl font-extrabold text-primary">{tags.length}</p>
+                <p className="text-sm text-foreground/60 font-semibold">etiquetas</p>
+              </div>
+            </div>
+          </section>
+
+          <section className="glass-card rounded-3xl p-6 border border-border/50">
+            <h2 className="text-2xl font-bold text-foreground mb-4">Ejemplo rápido</h2>
+            <pre className="rounded-2xl bg-slate-950 text-slate-100 p-4 overflow-x-auto text-xs leading-relaxed">{`const res = await fetch('${apiBaseUrl}');
+const data = await res.json();
+
+const cards = data.projects.map((project) => ({
+  title: project.name,
+  image: project.thumbnail,
+  url: project.url,
+  tags: project.tags,
+}));`}</pre>
+          </section>
+        </div>
+
+        <section className="glass-card rounded-3xl p-6 border border-border/50 mt-6">
+          <h2 className="text-2xl font-bold text-foreground mb-4">Estructura de respuesta</h2>
+          <pre className="rounded-2xl bg-slate-950 text-slate-100 p-4 overflow-x-auto text-xs leading-relaxed">{JSON.stringify({
+            meta: { name: 'Juntos por Venezuela API', version: '1.0.0', totalProjects: projectsData.length },
+            categories,
+            subcategories,
+            tags: tags.slice(0, 6),
+            projects: [exampleProject],
+          }, null, 2)}</pre>
+        </section>
+
+        <section className="glass-card rounded-3xl p-6 border border-border/50 mt-6">
+          <h2 className="text-2xl font-bold text-foreground mb-4">Campos de cada proyecto</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm">
+              <thead className="text-foreground/60 uppercase tracking-wide text-xs border-b border-border">
+                <tr><th className="py-3 pr-4">Campo</th><th className="py-3 pr-4">Tipo</th><th className="py-3">Descripción</th></tr>
+              </thead>
+              <tbody className="divide-y divide-border/70">
+                {apiFields.map(([field, type, description]) => (
+                  <tr key={field}>
+                    <td className="py-3 pr-4 font-mono font-bold text-primary">{field}</td>
+                    <td className="py-3 pr-4 font-mono text-foreground/70">{type}</td>
+                    <td className="py-3 text-foreground/70">{description}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="grid gap-6 md:grid-cols-3 mt-6">
+          {[
+            ['Categorías', categories],
+            ['Subcategorías', subcategories],
+            ['Etiquetas', tags],
+          ].map(([title, values]) => (
+            <div key={title} className="glass-card rounded-3xl p-6 border border-border/50">
+              <h3 className="text-xl font-bold text-foreground mb-4">{title}</h3>
+              <div className="flex flex-wrap gap-2">
+                {values.map((value) => <span key={value} className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold">{value}</span>)}
+              </div>
+            </div>
+          ))}
+        </section>
+      </main>
+    </div>
+  );
+}
+
 function App() {
+  const [currentHash, setCurrentHash] = useState(() => window.location.hash);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('Todas');
   const [selectedSubcategory, setSelectedSubcategory] = useState('Todos');
   const [selectedProject, setSelectedProject] = useState(null);
   const [showFullDescription, setShowFullDescription] = useState(false);
+
+  useEffect(() => {
+    const handleHashChange = () => setCurrentHash(window.location.hash);
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  const isApiDocumentation = currentHash === '#/api';
+
+  const allCategories = useMemo(() => Array.from(new Set(projectsData.map((p) => p.category).filter(Boolean))).sort(), []);
+  const allSubcategories = useMemo(() => Array.from(new Set(projectsData.flatMap((p) => p.subcategories || []))).sort(), []);
+  const allTags = useMemo(() => Array.from(new Set(projectsData.flatMap((p) => p.tags || []))).sort(), []);
 
   const filteredProjects = useMemo(() => {
     const normalizedSearch = searchTerm.trim().toLowerCase();
@@ -60,6 +202,16 @@ function App() {
       .sort((a, b) => (a.order || 0) - (b.order || 0));
   }, [searchTerm, selectedCategory, selectedSubcategory]);
 
+  if (isApiDocumentation) {
+    return (
+      <ApiDocumentation
+        categories={allCategories}
+        subcategories={allSubcategories}
+        tags={allTags}
+      />
+    );
+  }
+
   const hasActiveFilters =
     searchTerm || selectedCategory !== 'Todas' || selectedSubcategory !== 'Todos';
 
@@ -84,12 +236,19 @@ function App() {
       <div className="safari-blur absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px] pointer-events-none" />
       <div className="safari-blur absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px] pointer-events-none" />
 
-      <nav className="relative z-20 w-full px-6 pt-6 flex justify-end max-w-7xl mx-auto">
+      <nav className="relative z-20 w-full px-6 pt-6 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between max-w-7xl mx-auto">
+        <a
+          href="#/api"
+          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white/80 text-primary font-semibold rounded-full border border-primary/20 shadow-sm hover:bg-primary hover:text-primary-foreground transition-colors"
+        >
+          <BookOpen className="w-4 h-4" />
+          Documentación API
+        </a>
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSdJS1l8bEX_ewBamPc-L-DfKMUUjIqLqT2qsnJjSP2oRpBd9A/viewform?usp=header"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center px-6 py-2.5 bg-primary text-primary-foreground font-medium rounded-full shadow-lg shadow-primary/20 hover:scale-105 transition-transform"
+          className="inline-flex items-center justify-center px-6 py-2.5 bg-primary text-primary-foreground font-medium rounded-full shadow-lg shadow-primary/20 hover:scale-105 transition-transform"
         >
           Proponer proyecto
         </a>
@@ -144,7 +303,7 @@ function App() {
                     Categoría
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {['Todas', ...Array.from(new Set(projectsData.map((p) => p.category).filter(Boolean)))].map((category) => (
+                    {['Todas', ...allCategories].map((category) => (
                       <button
                         key={category}
                         type="button"
@@ -165,7 +324,7 @@ function App() {
                     Tipo de persona beneficiada
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {['Todos', ...subcategories].map((subcategory) => (
+                    {['Todos', ...staticSubcategories].map((subcategory) => (
                       <button
                         key={subcategory}
                         type="button"
@@ -274,8 +433,13 @@ function App() {
       </main>
 
       <footer className="relative z-10 w-full py-8 border-t border-border/50 bg-card/30 backdrop-blur-sm mt-auto text-center">
-        <p className="text-foreground/70 font-medium text-sm">
-          Desarrollado por{' '}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-sm">
+          <a href="#/api" className="inline-flex items-center gap-2 text-primary hover:underline font-semibold">
+            <BookOpen className="w-4 h-4" /> Documentación API
+          </a>
+          <span className="hidden sm:inline text-foreground/30">•</span>
+          <p className="text-foreground/70 font-medium">
+            Desarrollado por{' '}
           <a
             href="https://github.com/WilterD"
             target="_blank"
@@ -284,7 +448,8 @@ function App() {
           >
             WilterD
           </a>
-        </p>
+          </p>
+        </div>
       </footer>
 
       <AnimatePresence>
